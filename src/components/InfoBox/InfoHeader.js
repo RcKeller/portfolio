@@ -116,10 +116,12 @@ const InfoHeader = props => {
           <img src={avatar} alt="" />
         </div>
       </Link>
-      <h1 className={classes.title}>
-        {config.infoTitle.replace(/ /g, "\u00a0")}
-        <small>{config.infoTitleNote}</small>
-      </h1>
+      <Link onClick={avatarOnClick} to="/" title="back to Home page">
+        <h1 className={classes.title}>
+          {config.infoTitle.replace(/ /g, "\u00a0")}
+          <small>{config.infoTitleNote}</small>
+        </h1>
+      </Link>
       <IconButton
         aria-label="Expand the box"
         className={classes.expand}

@@ -8,11 +8,12 @@ import GithubIcon from "!svg-react-loader!../../images/svg-icons/github.svg?name
 import FacebookIcon from "!svg-react-loader!../../images/svg-icons/facebook.svg?name=FacebookIcon";
 import TwitterIcon from "!svg-react-loader!../../images/svg-icons/twitter.svg?name=TwitterIcon";
 import LinkedInIcon from "!svg-react-loader!../../images/svg-icons/linkedin.svg?name=LinkedInIcon";
+import ResumeIcon from "!svg-react-loader!../../images/svg-icons/resume.svg?name=ResumeIcon";
 
 const styles = theme => ({
   social: {
     display: "flex",
-    justifyContent: "center",
+    justifyContent: "space-evenly",
     flexWrap: "wrap"
   },
   link: {
@@ -39,7 +40,8 @@ const Socialcons = props => {
     twitter: TwitterIcon,
     facebook: FacebookIcon,
     github: GithubIcon,
-    linkedin: LinkedInIcon
+    linkedin: LinkedInIcon,
+    resume: ResumeIcon
   };
 
   return (
