@@ -18,8 +18,8 @@ const theme = createMuiTheme({
       linesMargin: "20px"
     },
     fonts: {
-      unstyledFamily: `Arial`,
-      styledFamily: "Open Sans",
+      unstyledFamily: `monospace`,
+      styledFamily: "Roboto Mono",
       styledFonts: "300,400,600"
     }
   },
@@ -152,7 +152,7 @@ const theme = createMuiTheme({
     }
   },
   typography: {
-    fontFamily: `Arial, sans-serif`,
+    fontFamily: `'Roboto Mono', monospace`,
     fontSize: 16
   }
 });
