@@ -14,7 +14,7 @@ const query = `{
         }
         frontmatter {
           title
-          subTitle
+          subtitle
         }
       }
     }

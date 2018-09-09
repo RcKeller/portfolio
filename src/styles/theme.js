@@ -61,7 +61,7 @@ const theme = createMuiTheme({
     colors: {
       background: colors.background,
       title: colors.gray,
-      subTitle: colors.gray,
+      subtitle: colors.gray,
       meta: colors.gray,
       content: colors.dark,
       footer: colors.gray,
@@ -72,7 +72,7 @@ const theme = createMuiTheme({
       fbCommentsColorscheme: "light"
     },
     sizes: {
-      articleMaxWidth: "50em"
+      articleMaxWidth: "60em"
     },
     fonts: {
       title: {
@@ -82,7 +82,7 @@ const theme = createMuiTheme({
         weight: 600,
         lineHeight: 1.1
       },
-      subTitle: {
+      subtitle: {
         size: 1.5,
         sizeM: 1.8,
         sizeL: 1.95,

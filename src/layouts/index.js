@@ -136,7 +136,7 @@ export const guery = graphql`
           }
           frontmatter {
             title
-            subTitle
+            subtitle
             category
             cover {
               children {

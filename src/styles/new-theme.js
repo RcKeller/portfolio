@@ -64,7 +64,7 @@ const theme = createMuiTheme({
     colors: {
       background: colors.background,
       title: colors.bright,
-      subTitle: colors.bright,
+      subtitle: colors.bright,
       meta: colors.bright,
       content: colors.bright,
       footer: colors.bright,
@@ -85,7 +85,7 @@ const theme = createMuiTheme({
         weight: 600,
         lineHeight: 1.1
       },
-      subTitle: {
+      subtitle: {
         size: 1.5,
         sizeM: 1.8,
         sizeL: 1.95,

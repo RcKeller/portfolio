@@ -21,16 +21,16 @@ const styles = theme => ({
       letterSpacing: "-0.05em"
     }
   },
-  subTitle: {
-    color: theme.main.colors.subTitle,
-    fontSize: `${theme.main.fonts.subTitle.size}em`,
-    lineHeight: theme.main.fonts.subTitle.lineHeight,
-    fontWeight: theme.main.fonts.subTitle.weight,
+  subtitle: {
+    color: theme.main.colors.subtitle,
+    fontSize: `${theme.main.fonts.subtitle.size}em`,
+    lineHeight: theme.main.fonts.subtitle.lineHeight,
+    fontWeight: theme.main.fonts.subtitle.weight,
     [`@media (min-width: ${theme.mediaQueryTresholds.M}px)`]: {
-      fontSize: `${theme.main.fonts.subTitle.sizeM}em`
+      fontSize: `${theme.main.fonts.subtitle.sizeM}em`
     },
     [`@media (min-width: ${theme.mediaQueryTresholds.L}px)`]: {
-      fontSize: `${theme.main.fonts.subTitle.sizeL}em`
+      fontSize: `${theme.main.fonts.subtitle.sizeL}em`
     }
   },
   meta: {
@@ -41,7 +41,7 @@ const styles = theme => ({
 });
 
 const PostHeader = props => {
-  const { classes, title, subTitle, date } = props;
+  const { classes, title, subtitle, date } = props;
 
   function myDate(dateString) {
     const dateObj = new Date(dateString).toUTCString();
@@ -56,7 +56,7 @@ const PostHeader = props => {
   return (
     <header className={classes.header}>
       <h1 className={classes.title}>{title}</h1>
-      <h2 className={classes.subTitle}>{subTitle}</h2>
+      <h2 className={classes.subtitle}>{subtitle}</h2>
       <div className={classes.meta}>{myDate(date)}</div>
     </header>
   );
@@ -65,7 +65,7 @@ const PostHeader = props => {
 PostHeader.propTypes = {
   classes: PropTypes.object.isRequired,
   title: PropTypes.string.isRequired,
-  subTitle: PropTypes.string,
+  subtitle: PropTypes.string,
   date: PropTypes.string.isRequired
 };
 
