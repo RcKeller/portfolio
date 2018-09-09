@@ -11,7 +11,7 @@ import InfoText from "./InfoText";
 import StackIcons from "./StackIcons";
 
 import { featureNavigator, moveNavigatorAside } from "./../../utils/shared";
-import { setNavigatorPosition, setNavigatorShape } from "../../state/store";
+import { setNavigatorPosition, setNavigatorShape, setCategoryFilter } from "../../state/store";
 
 const styles = theme => ({
   infoBox: {
@@ -59,7 +59,12 @@ const styles = theme => ({
 
 class InfoBox extends React.Component {
   avatarOnClick = featureNavigator.bind(this);
-  menulinkOnClick = moveNavigatorAside.bind(this);
+  menuLinkOnClick = moveNavigatorAside.bind(this);
+  // menuCategoryOnClick = setCategoryFilter.bind(this);
+  menuCategoryOnClick = val => {
+    this.props.setCategoryFilter(val);
+    // this.avatarOnClick()
+  };
 
   expandOnClick = e => {
     this.props.setNavigatorShape("closed");
@@ -84,7 +89,7 @@ class InfoBox extends React.Component {
         <div className={classes.wrapper}>
           {info && <InfoText info={info} />}
           <SocialIcons />
-          {pages && <InfoMenu pages={pages} linkOnClick={this.menulinkOnClick} />}
+          {pages && <InfoMenu pages={pages} linkOnClick={this.menuLinkOnClick} categoryOnClick={this.menuCategoryOnClick} />}
           <StackIcons />
         </div>
       </aside>
@@ -99,7 +104,8 @@ InfoBox.propTypes = {
   navigatorPosition: PropTypes.string.isRequired,
   navigatorShape: PropTypes.string.isRequired,
   isWideScreen: PropTypes.bool.isRequired,
-  setNavigatorShape: PropTypes.func.isRequired
+  setNavigatorShape: PropTypes.func.isRequired,
+  setCategoryFilter: PropTypes.func.isRequired
 };
 
 const mapStateToProps = (state, ownProps) => {
@@ -112,7 +118,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = {
   setNavigatorPosition,
-  setNavigatorShape
+  setNavigatorShape,
+  setCategoryFilter
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(injectSheet(styles)(InfoBox));

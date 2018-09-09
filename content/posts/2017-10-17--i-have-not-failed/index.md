@@ -1,6 +1,6 @@
 ---
 title: I have not failed. I've just found 10,000 ways that won't work
-category: "testimonies"
+category: "Tutorials"
 cover: photo-1463852247062-1bbca38f7805-cover.jpg
 ---
 
