@@ -1,10 +1,10 @@
 ---
 title: Codebreaking Webapp / API
 subtitle: Containerized, Performant Full-Stack WebApp
+category: Portfolio
 cover: codebreaking-webapp.png
 demo: http://students.washington.edu/rykeller/codebreaker/
 source: https://github.com/RcKeller/codebreaker
-date: 04/01/2017
 tags:
     - Web
     - React

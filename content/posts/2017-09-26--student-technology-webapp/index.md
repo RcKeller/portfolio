@@ -1,8 +1,8 @@
 ---
 title: Technology Project Management Refresh
-subtitle: Redefining the project proposal process.
+subtitle: Redefining the project proposal process
+category: Portfolio
 cover: student-technology-webapp.png
-date: 02/10/2017
 series: "STF Web App"
 next: Business Process Redesign
 nexturl: /stf-process-redesign

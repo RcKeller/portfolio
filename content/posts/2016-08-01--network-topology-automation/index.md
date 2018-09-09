@@ -1,8 +1,8 @@
 ---
 title: Network Topology Automation
 subtitle: Auto-Integration of Telecom Equipment
+category: Portfolio
 cover: network-topology-automation.png
-date: 08/01/2016
 tags:
     - Networking
     - Infrastructure

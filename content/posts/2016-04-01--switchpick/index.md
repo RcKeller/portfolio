@@ -1,9 +1,9 @@
 ---
 title: SwitchPick
 subtitle: Network Device Cracking System
+category: Portfolio
 cover: switchpick.png
 source: https://github.com/RcKeller/SwitchPick
-date: 01/01/2017
 tags:
     - Networking
     - Infrastructure

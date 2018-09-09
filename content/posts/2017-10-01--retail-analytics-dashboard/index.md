@@ -1,8 +1,8 @@
 ---
 title: Retail Analytics Dashboard
 subtitle: Bespoke Retail Analytics Tools
+category: Portfolio
 cover: retail-analytics-dashboard.png
-date: 10/01/2017
 tags:
     - Web
     - React

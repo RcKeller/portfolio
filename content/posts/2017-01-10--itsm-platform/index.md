@@ -1,10 +1,10 @@
 ---
 title: Open-Source ITSM Webapp 
 subtitle: OpenDesk IT Service Manager
+category: Portfolio
 cover: itsm-platform.png
 demo: http://students.washington.edu/rykeller/crm2/
 source: https://github.com/RcKeller/open-desk
-date: 01/01/2017
 tags:
     - Web
     - React

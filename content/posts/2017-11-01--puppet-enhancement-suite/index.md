@@ -1,9 +1,9 @@
 ---
 title: Puppet Enhancement Suite
 subtitle: Enhancing Internal Workflows
+category: Portfolio
 cover: puppet-enhancement-suite.png
 source: https://github.com/RcKeller/userscripts
-date: 11/01/2017
 tags:
     - Puppet
     - Web

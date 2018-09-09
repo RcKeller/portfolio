@@ -45,6 +45,9 @@ const InfoMenu = props => {
       <Link to="/" onClick={() => categoryOnClick('Portfolio')} className={classes.link} data-shape="closed">
         Portfolio
       </Link>
+      {/* <Link to="/" onClick={() => categoryOnClick('Experience')} className={classes.link} data-shape="closed">
+        Experience
+      </Link> */}
       <Link to="/" onClick={() => categoryOnClick('Tutorials')} className={classes.link} data-shape="closed">
         Tutorials
       </Link>

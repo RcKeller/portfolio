@@ -1,9 +1,9 @@
 ---
 title: Emotional Cartography
 subtitle: Emotional Profiling of Geospatial Areas
+category: Portfolio
 cover: emotional-cartography.png
 demo: http://students.washington.edu/rykeller/vibemap/
-date: 01/01/2017
 tags:
     - Web
     - jquery
