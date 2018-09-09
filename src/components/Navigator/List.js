@@ -57,9 +57,9 @@ class List extends React.Component {
       expandOnClick,
       categoryFilter,
       navigatorShape,
-      removeFilter
+      removeFilter,
+      navigatorPosition
     } = this.props;
-
     return (
       <div className={classes.posts}>
         <SpringScrollbars forceCheckOnScroll={true} isNavigator={true}>
@@ -78,6 +78,7 @@ class List extends React.Component {
                     post={post}
                     linkOnClick={linkOnClick}
                     categoryFilter={categoryFilter}
+                    navigatorPosition={navigatorPosition}
                   />
                 ))}
             </ul>

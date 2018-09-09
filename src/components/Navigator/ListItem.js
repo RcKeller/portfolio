@@ -3,6 +3,16 @@ import Link from "gatsby-link";
 import PropTypes from "prop-types";
 import injectSheet from "react-jss";
 import LazyLoad from "react-lazyload";
+import Card from '@material-ui/core/Card';
+// import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
+import LinkIcon from '@material-ui/icons/Link';
+import CodeIcon from '@material-ui/icons/Code';
+
 
 const styles = theme => ({
   listItem: {
@@ -17,101 +27,14 @@ const styles = theme => ({
       }
     }
   },
-  listLink: {
-    display: "flex",
-    alignContent: "center",
-    alignItems: "center",
-    justifyContent: "flex-start",
-    flexDirection: "row",
-    padding: ".7em 1em .7em 1em",
-    color: theme.navigator.colors.postsListItemLink,
-    "@media (hover: hover)": {
-      "&:hover": {
-        color: theme.navigator.colors.postsListItemLinkHover,
-        "& .pointer": {
-          borderRadius: "65% 75%"
-        }
-      }
-    }
+  card: {
+    maxWidth: '50em',
+    margin: '8px auto'
   },
-  listItemPointer: {
-    position: "relative",
-    flexShrink: 0,
-    overflow: "hidden",
-    borderRadius: "75% 65%",
-    width: "60px",
-    height: "60px",
-    margin: "0",
-    transition: "all .5s",
-    "& img": {
-      width: "100%",
-      height: "100%"
-    },
-    [`@media (min-width: ${theme.mediaQueryTresholds.M}px)`]: {
-      marginRight: ".5em",
-      width: "80px",
-      height: "80px"
-    },
-    [`@media (min-width: ${theme.mediaQueryTresholds.L}px)`]: {
-      marginRight: ".8em",
-      width: "90px",
-      height: "90px",
-      transition: "all .3s",
-      transitionTimingFunction: "ease",
-      ".moving-featured &, .is-aside &": {
-        width: "30px",
-        height: "30px"
-      }
-    }
+  media: {
+    height: 300,
+    objectFit: 'contain'
   },
-  listItemText: {
-    margin: "0 0 0 1.5em",
-    flexGrow: 1,
-    display: "flex",
-    flexDirection: "column",
-    width: "100%",
-    "& h1": {
-      lineHeight: 1.15,
-      fontWeight: 600,
-      letterSpacing: "-0.03em",
-      margin: 0,
-      fontSize: `${theme.navigator.sizes.postsListItemH1Font}em`,
-      [`@media (min-width: ${theme.mediaQueryTresholds.M}px)`]: {
-        fontSize: `${theme.navigator.sizes.postsListItemH1Font *
-          theme.navigator.sizes.fontIncraseForM}em`
-      },
-      [`@media (min-width: ${theme.mediaQueryTresholds.L}px)`]: {
-        fontSize: `${theme.navigator.sizes.postsListItemH1Font *
-          theme.navigator.sizes.fontIncraseForL}em`,
-        ".moving-featured &, .is-aside &": {
-          fontSize: "1em",
-          fontWeight: 400
-        }
-      }
-    },
-    "& h2": {
-      lineHeight: 1.2,
-      display: "block",
-      fontSize: `${theme.navigator.sizes.postsListItemH2Font}em`,
-      margin: ".3em 0 0 0",
-      [`@media (min-width: ${theme.mediaQueryTresholds.M}px)`]: {
-        fontSize: `${theme.navigator.sizes.postsListItemH2Font *
-          theme.navigator.sizes.fontIncraseForM}em`
-      },
-      [`@media (min-width: ${theme.mediaQueryTresholds.L}px)`]: {
-        fontSize: `${theme.navigator.sizes.postsListItemH2Font *
-          theme.navigator.sizes.fontIncraseForL}em`,
-        ".moving-featured &, .is-aside &": {
-          display: "none"
-        }
-      }
-    },
-    [`@media (min-width: ${theme.mediaQueryTresholds.L}px)`]: {
-      ".moving-featured &, .is-aside &": {
-        margin: "0 0 0 .5em"
-      }
-    }
-  }
 });
 
 class ListItem extends React.Component {
@@ -135,38 +58,50 @@ class ListItem extends React.Component {
   }
 
   render() {
-    const { classes, post, linkOnClick } = this.props;
-
+    const { classes, post, linkOnClick, navigatorPosition } = this.props;
+    console.log(navigatorPosition)
     return (
       <li
         className={`${classes.listItem} ${post.node.frontmatter.category}`}
         style={{ display: `${this.state.hidden ? "none" : "block"}` }}
         key={post.node.fields.slug}
       >
-        <Link
-          activeClassName="active"
-          className={classes.listLink}
-          to={post.node.fields.slug}
-          onClick={linkOnClick}
-        >
-          <div className={`${classes.listItemPointer} pointer`}>
-            <LazyLoad height={60} overflow={true} throttle={300} once={true} offset={100}>
-              <picture>
-                <source
-                  type="image/webp"
-                  srcSet={post.node.frontmatter.cover.children[0].resolutions.srcSetWebp}
-                />
-                <source srcSet={post.node.frontmatter.cover.children[0].resolutions.srcSet} />
-                <img src={post.node.frontmatter.cover.children[0].resolutions.src} alt="" />
-              </picture>
-            </LazyLoad>
-            {/*<Img sizes={post.node.frontmatter.cover.children[0].sizes} />*/}
-          </div>
-          <div className={classes.listItemText}>
-            <h1>{post.node.frontmatter.title}</h1>
-            {post.node.frontmatter.subtitle && <h2>{post.node.frontmatter.subtitle}</h2>}
-          </div>
-        </Link>
+        <Card className={classes.card}>
+          <Link
+            activeClassName="active"
+            // className={classes.listLink}
+            to={post.node.fields.slug}
+            onClick={linkOnClick}
+          >
+            {navigatorPosition && <CardMedia
+              className={classes.media}
+              image={post.node.frontmatter.cover.children[0].resolutions.src}
+              // image={post.node.frontmatter.cover.children[0].resolutions.srcSetWebp}
+              // image={post.node.frontmatter.cover.children[0].resolutions.srcSet}
+              title={post.node.frontmatter.title}
+            />}
+            <CardContent>
+              <Typography gutterBottom variant="headline">
+                {post.node.frontmatter.title}
+              </Typography>
+              <Typography color="textSecondary">
+                {post.node.frontmatter.subtitle}
+              </Typography>
+            </CardContent>
+          </Link>
+          <CardActions>
+            {post.node.frontmatter.demo && 
+              <Button size="small" color="primary">
+                <LinkIcon />{' '}Demo
+              </Button>
+            }
+            {post.node.frontmatter.source && 
+              <Button size="small" color="primary">
+                <CodeIcon />{' '}Source
+              </Button>
+            }
+          </CardActions>
+          </Card>
       </li>
     );
   }
@@ -176,7 +111,8 @@ ListItem.propTypes = {
   classes: PropTypes.object.isRequired,
   post: PropTypes.object.isRequired,
   linkOnClick: PropTypes.func.isRequired,
-  categoryFilter: PropTypes.string.isRequired
+  categoryFilter: PropTypes.string.isRequired,
+  navigatorPosition: PropTypes.string
 };
 
 export default injectSheet(styles)(ListItem);

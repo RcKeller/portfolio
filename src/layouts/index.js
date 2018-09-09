@@ -138,10 +138,12 @@ export const guery = graphql`
             title
             subtitle
             category
+            demo
+            source
             cover {
               children {
                 ... on ImageSharp {
-                  resolutions(width: 90, height: 90) {
+                  resolutions(height: 300) {
                     ...GatsbyImageSharpResolutions_withWebp_noBase64
                   }
                 }
