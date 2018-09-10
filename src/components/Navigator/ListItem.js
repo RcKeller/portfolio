@@ -27,9 +27,9 @@ const styles = theme => ({
       }
     }
   },
-  icon: {
-    marginRight: 8
-  },
+  // icon: {
+  //   marginRight: 8
+  // },
   content: {
     paddingBottom: '0 !important'
   },
@@ -101,13 +101,13 @@ class ListItem extends React.Component {
           <CardActions>
             {post.node.frontmatter.demo && 
               <Button size="small" color="primary">
-                <LinkIcon className={classes.icon} />
+                <LinkIcon style={{ marginRight: 8 }} />
                 Demo
               </Button>
             }
             {post.node.frontmatter.source && 
               <Button size="small" color="primary">
-                <CodeIcon className={classes.icon} />
+                <CodeIcon style={{ marginRight: 8 }} />
                 Source
               </Button>
             }
