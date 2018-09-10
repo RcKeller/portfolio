@@ -59,7 +59,7 @@ class ListItem extends React.Component {
 
   render() {
     const { classes, post, linkOnClick, navigatorPosition } = this.props;
-    console.log(navigatorPosition)
+    const isAside = navigatorPosition === 'is-aside'
     return (
       <li
         className={`${classes.listItem} ${post.node.frontmatter.category}`}
@@ -73,7 +73,7 @@ class ListItem extends React.Component {
             to={post.node.fields.slug}
             onClick={linkOnClick}
           >
-            {navigatorPosition && <CardMedia
+            {!isAside && <CardMedia
               className={classes.media}
               image={post.node.frontmatter.cover.children[0].resolutions.src}
               // image={post.node.frontmatter.cover.children[0].resolutions.srcSetWebp}
@@ -81,7 +81,7 @@ class ListItem extends React.Component {
               title={post.node.frontmatter.title}
             />}
             <CardContent>
-              <Typography gutterBottom variant="headline">
+              <Typography variant="headline">
                 {post.node.frontmatter.title}
               </Typography>
               <Typography color="textSecondary">

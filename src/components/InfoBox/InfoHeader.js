@@ -34,7 +34,8 @@ const styles = theme => ({
         left: "50%"
       },
       ".is-aside.open &": {
-        left: "8%",
+        // left: "8%",
+        left: '10px',
         top: "0"
       }
     }
@@ -42,8 +43,8 @@ const styles = theme => ({
   avatar: {
     width: "36px",
     height: "36px",
-    borderRadius: "65% 75%",
-    border: "1px solid #ddd",
+    // borderRadius: "65% 75%",
+    // border: "1px solid #ddd",
     transition: "all .3s",
     transitionTimingFunction: "ease",
     display: "inline-block",
@@ -58,12 +59,12 @@ const styles = theme => ({
     [`@media (min-width: ${theme.mediaQueryTresholds.L}px)`]: {
       width: "60px",
       height: "60px"
-    },
-    "@media (hover: hover)": {
-      "&:hover": {
-        borderRadius: "75% 65%"
-      }
     }
+    // "@media (hover: hover)": {
+    //   "&:hover": {
+    //     borderRadius: "75% 65%"
+    //   }
+    // }
   },
   title: {
     willChange: "transform, left, top",
@@ -88,22 +89,22 @@ const styles = theme => ({
       transform: "translate(-50%)",
       transition: "all .5s",
       ".is-aside.open &": {
-        left: "60%",
+        left: "65%",
         top: `${1.9 - theme.info.fonts.boxTitleSizeL}em`,
         textAlign: "left"
       }
     }
   },
-  expand: {
-    position: "absolute",
-    top: "30px",
-    right: "-25px",
-    display: "none",
-    color: theme.info.colors.text,
-    ".is-aside.open &": {
-      display: "block"
-    }
-  }
+  // expand: {
+  //   position: "absolute",
+  //   top: "30px",
+  //   right: "-25px",
+  //   display: "none",
+  //   color: theme.info.colors.text,
+  //   ".is-aside.open &": {
+  //     display: "block"
+  //   }
+  // }
 });
 
 const InfoHeader = props => {
@@ -116,20 +117,20 @@ const InfoHeader = props => {
           <img src={avatar} alt="" />
         </div>
       </Link>
-      <Link onClick={avatarOnClick} to="/" title="back to Home page">
-        <h1 className={classes.title}>
+      {/* <Link onClick={expandOnClick} to="/" title="back to Home page"> */}
+        <h1 className={classes.title} onClick={expandOnClick}>
           {config.infoTitle.replace(/ /g, "\u00a0")}
           <small>{config.infoTitleNote}</small>
         </h1>
-      </Link>
-      <IconButton
+      {/* </Link> */}
+      {/* <IconButton
         aria-label="Expand the box"
         className={classes.expand}
         onClick={expandOnClick}
         title="Expand the box"
       >
         <ExpandMoreIcon />
-      </IconButton>
+      </IconButton> */}
     </header>
   );
 };

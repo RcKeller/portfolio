@@ -63,7 +63,6 @@ class InfoBox extends React.Component {
   // menuCategoryOnClick = setCategoryFilter.bind(this);
   menuCategoryOnClick = val => {
     this.props.setCategoryFilter(val);
-    // this.avatarOnClick()
   };
 
   expandOnClick = e => {
