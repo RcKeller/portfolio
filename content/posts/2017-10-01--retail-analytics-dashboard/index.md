@@ -1,6 +1,6 @@
 ---
 title: Retail Analytics Dashboard
-subtitle: Bespoke Retail Analytics Tools
+subtitle: Bespoke retail analytics tools
 category: Portfolio
 cover: retail-analytics-dashboard.png
 tags:

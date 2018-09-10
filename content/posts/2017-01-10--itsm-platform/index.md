@@ -1,6 +1,6 @@
 ---
-title: Open-Source ITSM Webapp 
-subtitle: OpenDesk IT Service Manager
+title: Service Manager
+subtitle: Open Source ITSM Platform
 category: Portfolio
 cover: itsm-platform.png
 demo: http://students.washington.edu/rykeller/crm2/

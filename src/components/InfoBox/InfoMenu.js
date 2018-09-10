@@ -24,8 +24,8 @@ const styles = theme => ({
 });
 
 const InfoMenu = props => {
-  const { classes, pages, linkOnClick, categoryOnClick } = props;
-
+  const { classes, pages, categories, linkOnClick, categoryOnClick } = props;
+  console.log(categories)
   return (
     <nav className={classes.infoMenu}>
       {pages.map((page, i) => {
@@ -42,15 +42,20 @@ const InfoMenu = props => {
           </Link>
         );
       })}
-      <Link to="/" onClick={() => categoryOnClick('Portfolio')} className={classes.link} data-shape="closed">
+      {categories.map(category => (
+        <Link key={category} to="/" onClick={() => categoryOnClick(category)} className={classes.link} data-shape="closed">
+          {category}
+        </Link>
+      ))}
+      {/* <Link to="/" onClick={() => categoryOnClick('Portfolio')} className={classes.link} data-shape="closed">
         Portfolio
-      </Link>
+      </Link> */}
       {/* <Link to="/" onClick={() => categoryOnClick('Experience')} className={classes.link} data-shape="closed">
         Experience
       </Link> */}
-      <Link to="/" onClick={() => categoryOnClick('Tutorials')} className={classes.link} data-shape="closed">
+      {/* <Link to="/" onClick={() => categoryOnClick('Tutorials')} className={classes.link} data-shape="closed">
         Tutorials
-      </Link>
+      </Link> */}
       {/* <Link to="/contact/" onClick={linkOnClick} className={classes.link} data-shape="closed">
         Contact
       </Link> */}
@@ -62,7 +67,8 @@ InfoMenu.propTypes = {
   pages: PropTypes.array.isRequired,
   classes: PropTypes.object.isRequired,
   linkOnClick: PropTypes.func.isRequired,
-  categoryOnClick: PropTypes.func.isRequired
+  categoryOnClick: PropTypes.func.isRequired,
+  categories: PropTypes.array.isRequired
 };
 
 export default injectSheet(styles)(InfoMenu);

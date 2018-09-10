@@ -7,6 +7,7 @@ require("core-js/fn/array/find");
 import SocialIcons from "./SocialIcons";
 import InfoMenu from "./InfoMenu";
 import InfoHeader from "./InfoHeader";
+// import InfoEducation from "./InfoEducation";
 import InfoText from "./InfoText";
 import StackIcons from "./StackIcons";
 
@@ -70,9 +71,8 @@ class InfoBox extends React.Component {
   };
 
   render() {
-    const { classes, parts, pages, navigatorPosition, navigatorShape } = this.props;
+    const { classes, parts, pages, categories, navigatorPosition, navigatorShape } = this.props;
     const info = parts.find(el => el.node.frontmatter.title === "info");
-
     return (
       <aside
         className={`${classes.infoBox} ${navigatorPosition ? navigatorPosition : ""} 
@@ -87,8 +87,9 @@ class InfoBox extends React.Component {
         )}
         <div className={classes.wrapper}>
           {info && <InfoText info={info} />}
+          {/* <InfoEducation /> */}
           <SocialIcons />
-          {pages && <InfoMenu pages={pages} linkOnClick={this.menuLinkOnClick} categoryOnClick={this.menuCategoryOnClick} />}
+          {pages && <InfoMenu pages={pages} categories={categories} linkOnClick={this.menuLinkOnClick} categoryOnClick={this.menuCategoryOnClick} />}
           <StackIcons />
         </div>
       </aside>
@@ -104,7 +105,8 @@ InfoBox.propTypes = {
   navigatorShape: PropTypes.string.isRequired,
   isWideScreen: PropTypes.bool.isRequired,
   setNavigatorShape: PropTypes.func.isRequired,
-  setCategoryFilter: PropTypes.func.isRequired
+  setCategoryFilter: PropTypes.func.isRequired,
+  categories: PropTypes.array
 };
 
 const mapStateToProps = (state, ownProps) => {

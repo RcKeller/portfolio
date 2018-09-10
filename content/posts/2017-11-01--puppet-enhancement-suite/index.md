@@ -1,6 +1,6 @@
 ---
 title: Puppet Enhancement Suite
-subtitle: Enhancing Internal Workflows
+subtitle: Enhancing webapps using Userscripts
 category: Portfolio
 cover: puppet-enhancement-suite.png
 source: https://github.com/RcKeller/userscripts

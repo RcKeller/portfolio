@@ -1,6 +1,6 @@
 ---
 title: SwitchPick
-subtitle: Network Device Cracking System
+subtitle: Network Device Cracking
 category: Portfolio
 cover: switchpick.png
 source: https://github.com/RcKeller/SwitchPick

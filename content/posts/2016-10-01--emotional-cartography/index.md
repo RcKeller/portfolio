@@ -1,6 +1,6 @@
 ---
 title: Emotional Cartography
-subtitle: Emotional Profiling of Geospatial Areas
+subtitle: Webapp using ML APIs to profile Geospatial Areas
 category: Portfolio
 cover: emotional-cartography.png
 demo: http://students.washington.edu/rykeller/vibemap/

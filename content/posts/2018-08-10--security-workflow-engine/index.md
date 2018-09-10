@@ -1,6 +1,6 @@
 ---
-title: Security Workflow Engine
-subtitle: Automating triage and remediation of cyber threats
+title: Cybersecurity Workflow Engine
+subtitle: Automating triage and remediation for emerging threats
 category: Portfolio
 cover: security-workflow-engine.png
 date: 08/01/2016

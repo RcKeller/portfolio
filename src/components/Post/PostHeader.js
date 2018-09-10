@@ -57,7 +57,6 @@ const PostHeader = props => {
 
     return dateToShow;
   }
-  console.log('COVER:', cover)
   const src = cover && cover.childImageSharp ? cover.childImageSharp.resize.src : undefined
   return (
     <header className={classes.header}>

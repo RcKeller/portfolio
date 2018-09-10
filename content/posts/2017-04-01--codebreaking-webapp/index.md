@@ -1,6 +1,6 @@
 ---
-title: Codebreaking Webapp / API
-subtitle: Containerized, Performant Full-Stack WebApp
+title: Codebreaking System
+subtitle: Containerized, Performant Full-Stack Webapp
 category: Portfolio
 cover: codebreaking-webapp.png
 demo: http://students.washington.edu/rykeller/codebreaker/

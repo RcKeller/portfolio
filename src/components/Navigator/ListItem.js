@@ -81,9 +81,9 @@ class ListItem extends React.Component {
             to={post.node.fields.slug}
             onClick={linkOnClick}
           >
-            {!isAside && <CardMedia
+            {!isAside && !!post.node.frontmatter.cover && <CardMedia
               // className={classes.media}
-              style={{ objectFit: 'contain', height: post.node.frontmatter.cover.children[0].resolutions.height}}
+              style={{ objectFit: 'contain', maxHeight: 300, height: post.node.frontmatter.cover.children[0].resolutions.height}}
               image={post.node.frontmatter.cover.children[0].resolutions.src}
               // image={post.node.frontmatter.cover.children[0].resolutions.srcSetWebp}
               // image={post.node.frontmatter.cover.children[0].resolutions.srcSet}
@@ -100,13 +100,13 @@ class ListItem extends React.Component {
           </Link>
           <CardActions>
             {post.node.frontmatter.demo && 
-              <Button size="small" color="primary">
+              <Button href={post.node.frontmatter.demo} target='_blank' size="small" color="primary">
                 <LinkIcon style={{ marginRight: 8 }} />
                 Demo
               </Button>
             }
             {post.node.frontmatter.source && 
-              <Button size="small" color="primary">
+              <Button href={post.node.frontmatter.source} target='_blank' size="small" color="primary">
                 <CodeIcon style={{ marginRight: 8 }} />
                 Source
               </Button>
