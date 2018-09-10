@@ -16,8 +16,6 @@ const Post = props => {
   const html = (post || {}).html;
   const htmlAst = (post || {}).htmlAst;
 
-  console.log(post);
-
   return (
     <Article>
       <PostHeader title={title} subtitle={subtitle} date={date} cover={cover} />

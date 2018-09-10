@@ -35,13 +35,14 @@ const styles = theme => ({
   },
   card: {
     // maxWidth: '50em',
-    maxWidth: theme.main.sizes.articleMaxWidth,
+    // maxWidth: theme.main.sizes.articleMaxWidth,
+    maxWidth: 960,
     margin: '8px auto'
-  },
-  media: {
-    // height: 300,
-    objectFit: 'contain'
-  },
+  }
+  // media: {
+  //   // height: 300,
+  //   objectFit: 'contain'
+  // },
 });
 
 class ListItem extends React.Component {
@@ -81,8 +82,8 @@ class ListItem extends React.Component {
             onClick={linkOnClick}
           >
             {!isAside && <CardMedia
-              className={classes.media}
-              style={{ height: post.node.frontmatter.cover.children[0].resolutions.height}}
+              // className={classes.media}
+              style={{ objectFit: 'contain', height: post.node.frontmatter.cover.children[0].resolutions.height}}
               image={post.node.frontmatter.cover.children[0].resolutions.src}
               // image={post.node.frontmatter.cover.children[0].resolutions.srcSetWebp}
               // image={post.node.frontmatter.cover.children[0].resolutions.srcSet}

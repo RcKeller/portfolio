@@ -4,7 +4,8 @@ import injectSheet from "react-jss";
 
 const styles = theme => ({
   header: {
-    margin: "0 0 3em"
+    margin: "0 0 3em",
+    borderBottom: `1px solid ${theme.base.colors.lines}`
   },
   title: {
     color: theme.main.colors.title,
@@ -33,6 +34,10 @@ const styles = theme => ({
       fontSize: `${theme.main.fonts.subtitle.sizeL}em`
     }
   },
+  image: {
+    margin: '1em 0',
+    maxWidth: '100%'
+  },
   meta: {
     fontSize: `${theme.main.fonts.meta.size}em`,
     fontWeight: theme.main.fonts.meta.weight,
@@ -53,11 +58,13 @@ const PostHeader = props => {
     return dateToShow;
   }
   console.log('COVER:', cover)
+  const src = cover && cover.childImageSharp ? cover.childImageSharp.resize.src : undefined
   return (
     <header className={classes.header}>
       <h1 className={classes.title}>{title}</h1>
       <h2 className={classes.subtitle}>{subtitle}</h2>
       <div className={classes.meta}>{myDate(date)}</div>
+      <img className={classes.image} src={src} />
     </header>
   );
 };
@@ -66,7 +73,7 @@ PostHeader.propTypes = {
   classes: PropTypes.object.isRequired,
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string,
-  cover: PropTypes.string,
+  cover: PropTypes.object,
   date: PropTypes.string.isRequired
 };
 
