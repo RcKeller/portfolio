@@ -1,8 +1,8 @@
 ---
-title: Technology Project Management Refresh
-subtitle: Redefining the project proposal process
+title: IT Project Management Webapp
+subtitle: Used to allocate $5 million annaully across 100 project proposals
 category: Portfolio
-cover: student-technology-webapp.png
+cover: project-management-webapp.png
 series: "STF Web App"
 next: Business Process Redesign
 nexturl: /stf-process-redesign
