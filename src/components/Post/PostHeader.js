@@ -41,7 +41,7 @@ const styles = theme => ({
 });
 
 const PostHeader = props => {
-  const { classes, title, subtitle, date } = props;
+  const { classes, title, subtitle, date, cover } = props;
 
   function myDate(dateString) {
     const dateObj = new Date(dateString).toUTCString();
@@ -52,7 +52,7 @@ const PostHeader = props => {
 
     return dateToShow;
   }
-
+  console.log('COVER:', cover)
   return (
     <header className={classes.header}>
       <h1 className={classes.title}>{title}</h1>
@@ -66,6 +66,7 @@ PostHeader.propTypes = {
   classes: PropTypes.object.isRequired,
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string,
+  cover: PropTypes.string,
   date: PropTypes.string.isRequired
 };
 

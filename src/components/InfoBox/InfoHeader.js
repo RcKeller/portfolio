@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import injectSheet from "react-jss";
 import Link from "gatsby-link";
+import Typist from 'react-typist'
 import IconButton from "@material-ui/core/IconButton";
 
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
@@ -75,7 +76,8 @@ const styles = theme => ({
     "& small": {
       display: "block",
       fontSize: ".6em",
-      marginTop: ".3em"
+      marginTop: ".3em",
+      color: `${theme.base.colors.link}`
     },
     [`@media (min-width: ${theme.mediaQueryTresholds.M}px)`]: {
       fontSize: `${theme.info.fonts.boxTitleSizeM}em`
@@ -120,7 +122,11 @@ const InfoHeader = props => {
       {/* <Link onClick={expandOnClick} to="/" title="back to Home page"> */}
         <h1 className={classes.title} onClick={expandOnClick}>
           {config.infoTitle.replace(/ /g, "\u00a0")}
-          <small>{config.infoTitleNote}</small>
+          <small>
+          <Typist delay={200} avgTypingDelay={50} cursor={{ show: false }}>
+            {config.infoTitleNote}
+          </Typist>
+          </small>
         </h1>
       {/* </Link> */}
       {/* <IconButton

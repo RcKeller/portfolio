@@ -27,12 +27,19 @@ const styles = theme => ({
       }
     }
   },
+  icon: {
+    marginRight: 8
+  },
+  content: {
+    paddingBottom: '0 !important'
+  },
   card: {
-    maxWidth: '50em',
+    // maxWidth: '50em',
+    maxWidth: theme.main.sizes.articleMaxWidth,
     margin: '8px auto'
   },
   media: {
-    height: 300,
+    // height: 300,
     objectFit: 'contain'
   },
 });
@@ -75,13 +82,14 @@ class ListItem extends React.Component {
           >
             {!isAside && <CardMedia
               className={classes.media}
+              style={{ height: post.node.frontmatter.cover.children[0].resolutions.height}}
               image={post.node.frontmatter.cover.children[0].resolutions.src}
               // image={post.node.frontmatter.cover.children[0].resolutions.srcSetWebp}
               // image={post.node.frontmatter.cover.children[0].resolutions.srcSet}
               title={post.node.frontmatter.title}
             />}
-            <CardContent>
-              <Typography variant="headline">
+            <CardContent className={classes.content}>
+              <Typography color='primary' gutterBottom variant={!isAside ? 'headline' : 'subheading'}>
                 {post.node.frontmatter.title}
               </Typography>
               <Typography color="textSecondary">
@@ -92,12 +100,14 @@ class ListItem extends React.Component {
           <CardActions>
             {post.node.frontmatter.demo && 
               <Button size="small" color="primary">
-                <LinkIcon />{' '}Demo
+                <LinkIcon className={classes.icon} />
+                Demo
               </Button>
             }
             {post.node.frontmatter.source && 
               <Button size="small" color="primary">
-                <CodeIcon />{' '}Source
+                <CodeIcon className={classes.icon} />
+                Source
               </Button>
             }
           </CardActions>

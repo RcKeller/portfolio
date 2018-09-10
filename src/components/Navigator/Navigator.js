@@ -113,7 +113,6 @@ class Navigator extends React.Component {
 
   render() {
     const { classes, posts, navigatorPosition, navigatorShape, categoryFilter } = this.props;
-    console.log(this.props)
     return (
       <nav
         style={{ background: navigatorPosition === 'is-aside' ? '#fff' : 'unset'}}

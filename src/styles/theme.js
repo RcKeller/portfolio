@@ -27,8 +27,8 @@ const theme = createMuiTheme({
     colors: {
       text: colors.gray,
       background: colors.background,
-      socialIcons: colors.lightGray,
-      socialIconsHover: colors.accent,
+      socialIcons: colors.accent,
+      socialIconsHover: colors.lightGray,
       menuLink: colors.gray,
       menuLinkHover: colors.accent
     },
@@ -72,7 +72,7 @@ const theme = createMuiTheme({
       fbCommentsColorscheme: "light"
     },
     sizes: {
-      articleMaxWidth: "60em"
+      articleMaxWidth: "960px"
     },
     fonts: {
       title: {

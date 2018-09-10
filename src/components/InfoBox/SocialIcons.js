@@ -26,8 +26,8 @@ const styles = theme => ({
     }
   },
   svg: {
-    width: "40px",
-    height: "40px",
+    width: "30px",
+    height: "30px",
     fill: theme.info.colors.socialIcons,
     transition: "all .5s"
   }

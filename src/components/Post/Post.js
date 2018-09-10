@@ -11,15 +11,16 @@ const Post = props => {
   const frontmatter = (post || {}).frontmatter;
   const title = ((post || {}).frontmatter || {}).title;
   const subtitle = ((post || {}).frontmatter || {}).subtitle;
+  const cover = ((post || {}).frontmatter || {}).cover;
   const date = ((post || {}).fields || {}).prefix;
   const html = (post || {}).html;
   const htmlAst = (post || {}).htmlAst;
 
-  //console.log(htmlAst);
+  console.log(post);
 
   return (
     <Article>
-      <PostHeader title={title} subtitle={subtitle} date={date} />
+      <PostHeader title={title} subtitle={subtitle} date={date} cover={cover} />
       <Content html={html} />
       <PostFooter author={author} post={post} slug={slug} facebook={facebook} />
     </Article>

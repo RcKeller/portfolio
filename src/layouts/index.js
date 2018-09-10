@@ -143,7 +143,7 @@ export const guery = graphql`
             cover {
               children {
                 ... on ImageSharp {
-                  resolutions(height: 300) {
+                  resolutions(width: 960) {
                     ...GatsbyImageSharpResolutions_withWebp_noBase64
                   }
                 }

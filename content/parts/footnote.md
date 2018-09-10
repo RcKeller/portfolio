@@ -2,4 +2,4 @@
 title: footnote
 ---
 
-<!-- * © 2018. Ryan Keller -->
+© 2018. Ryan Keller
