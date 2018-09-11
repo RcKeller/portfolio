@@ -5,7 +5,7 @@ import Avatar from "@material-ui/core/Avatar";
 import Link from "gatsby-link";
 import { connect } from "react-redux";
 
-import { setNavigatorPosition } from "../../state/store";
+import { setNavigatorPosition, setCategoryFilter } from "../../state/store";
 import { featureNavigator, moveNavigatorAside } from "./../../utils/shared";
 
 import config from "../../../content/meta/config";
@@ -59,9 +59,12 @@ const styles = theme => ({
 class InfoBar extends React.Component {
   homeLinkOnClick = featureNavigator.bind(this);
   pageLinkOnClick = moveNavigatorAside.bind(this);
+  menuCategoryOnClick = val => {
+    this.props.setCategoryFilter(val);
+  };
 
   render() {
-    const { classes, pages } = this.props;
+    const { classes, pages, categories } = this.props;
 
     return (
       <aside className={classes.infoBar}>
@@ -74,8 +77,10 @@ class InfoBar extends React.Component {
         </h3>
         <TopMenu
           pages={pages}
+          categories={categories}
           homeLinkOnClick={this.homeLinkOnClick}
           pageLinkOnClick={this.pageLinkOnClick}
+          categoryOnClick={this.menuCategoryOnClick}
         />
       </aside>
     );
@@ -84,7 +89,8 @@ class InfoBar extends React.Component {
 
 InfoBar.propTypes = {
   classes: PropTypes.object.isRequired,
-  pages: PropTypes.array.isRequired
+  pages: PropTypes.array.isRequired,
+  categories: PropTypes.array.isRequired
 };
 
 const mapStateToProps = (state, ownProps) => {
@@ -95,7 +101,8 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = {
-  setNavigatorPosition
+  setNavigatorPosition,
+  setCategoryFilter
 };
 
 export default connect(

@@ -25,8 +25,8 @@ module.exports = {
   contactEmail: "john@doe.com",
   // social
   authorSocialLinks: [
-    { name: "github", url: "https://github.com/RcKeller" },
-    { name: "linkedin", url: "https://www.linkedin.com/in/ryanckeller" },
-    { name: "resume", url: "https://rykeller.com/resume.pdf" }
+    { name: "GitHub", url: "https://github.com/RcKeller" },
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/ryanckeller" },
+    { name: "Resume", url: "https://rykeller.com/resume.pdf" }
   ]
 };

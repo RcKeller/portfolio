@@ -12,6 +12,8 @@ import React from 'react';
 import injectSheet from 'react-jss';
 import {Manager, Popper, Target} from 'react-popper';
 
+import { authorSocialLinks } from "../../../content/meta/config";
+
 const styles = theme => ({
   topMenu: {
     float: "right",
@@ -51,9 +53,9 @@ class TopMenu extends React.Component {
   };
 
   render() {
-    const { classes, pages } = this.props;
-    const { anchorEl, open } = this.state;
-
+    const { classes, pages, categories, categoryOnClick } = this.props;
+    const { anchorEl, open } = this.state
+    console.log(authorSocialLinks)
     return (
       <nav className={classes.topMenu}>
         <Manager>
@@ -101,6 +103,29 @@ class TopMenu extends React.Component {
                         </Link>
                       );
                     })}
+                    {/* {categories.map((category) => (
+                      <Link key={category} to='/' style={{ display: "block" }}>
+                        <MenuItem
+                          onClick={e => {
+                            categoryOnClick(e)
+                            // this.handleClose()
+                          }}
+                        >
+                          {category}
+                        </MenuItem>
+                      </Link>
+                    ))} */}
+                    <hr />
+                    {authorSocialLinks.map((link) => {
+                      const { name, url } = link;
+                      return (
+                        <a href={url} target='_blank'>
+                          <MenuItem>
+                            {name}
+                          </MenuItem>
+                        </a>
+                      );
+                    })}
                     {/* <Link to="/contact/" style={{ display: "block" }}>
                       <MenuItem
                         onClick={e => {
@@ -124,9 +149,11 @@ class TopMenu extends React.Component {
 
 TopMenu.propTypes = {
   pages: PropTypes.array.isRequired,
+  categories: PropTypes.array.isRequired,
   classes: PropTypes.object.isRequired,
   pageLinkOnClick: PropTypes.func.isRequired,
-  homeLinkOnClick: PropTypes.func.isRequired
+  homeLinkOnClick: PropTypes.func.isRequired,
+  categoryOnClick: PropTypes.func.isRequired
 };
 
 export default injectSheet(styles)(TopMenu);

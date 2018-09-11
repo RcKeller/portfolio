@@ -13,7 +13,7 @@ import ResumeIcon from "!svg-react-loader!../../images/svg-icons/resume.svg?name
 const styles = theme => ({
   social: {
     display: "flex",
-    justifyContent: "space-evenly",
+    justifyContent: "space-around",
     flexWrap: "wrap",
     margin: '2em auto'
   },
@@ -40,11 +40,11 @@ const Socialcons = props => {
   const { classes } = props;
   const items = config.authorSocialLinks;
   const icons = {
-    twitter: TwitterIcon,
-    facebook: FacebookIcon,
-    github: GithubIcon,
-    linkedin: LinkedInIcon,
-    resume: ResumeIcon
+    Twitter: TwitterIcon,
+    Facebook: FacebookIcon,
+    GitHub: GithubIcon,
+    LinkedIn: LinkedInIcon,
+    Resume: ResumeIcon
   };
 
   return (

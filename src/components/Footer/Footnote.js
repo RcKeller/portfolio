@@ -7,6 +7,8 @@ const styles = theme => ({
     fontSize: `${theme.footer.fonts.footnote.size}em`,
     lineHeight: theme.footer.fonts.footnote.lineHeight,
     color: theme.footer.colors.text,
+    textAlign: 'right',
+    
     "& a": {
       color: theme.footer.colors.link,
       fontWeight: "normal",
