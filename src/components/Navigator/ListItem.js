@@ -71,12 +71,16 @@ const styles = theme => ({
     flex: '1 0 auto',
   },
   cover: {
-    height: 300,
-    width: '100%',
-    maxWidth: 600,
-    objectFit: 'contain',
-    backgroundPosition: 'left',
-    marginLeft: 'auto'
+    display: 'none',
+    [`@media (min-width: ${theme.mediaQueryTresholds.M}px)`]: {
+      display: 'block',
+      height: 300,
+      width: '100%',
+      maxWidth: 600,
+      objectFit: 'contain',
+      backgroundPosition: 'left',
+      marginLeft: 'auto'
+    }
   },
   none: {
     display: 'none'
