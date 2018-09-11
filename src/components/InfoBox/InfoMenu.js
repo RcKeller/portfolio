@@ -9,14 +9,18 @@ const styles = theme => ({
   infoMenu: {
     display: "flex",
     flexDirection: "column",
-    alignItems: "center",
+    // alignItems: "center",
     listStyle: "none",
     margin: 0,
     width: "100%"
   },
   button: {
-    padding: '.5em',
-    margin: '.5em'
+    width: '100%',
+    // padding: '1em'
+    marginBottom: '2em',
+    padding: '.5em'
+    // padding: '.5em',
+    // margin: '.5em'
   }
 });
 
@@ -33,7 +37,7 @@ const InfoMenu = props => {
             onClick={linkOnClick}
             data-shape="closed"
           >
-            <Button className={classes.button} size='large' color='primary' >
+            <Button className={classes.button} size='large' color='primary' variant='outlined'>
               {frontmatter.menuTitle ? frontmatter.menuTitle : frontmatter.title}
             </Button>
           </Link>
@@ -41,7 +45,7 @@ const InfoMenu = props => {
       })}
       {categories.map(category => (
         <Link key={category} to='/' onClick={() => categoryOnClick(category)} data-shape="closed">
-          <Button className={classes.button} size='large' color='primary'>
+          <Button className={classes.button} size='large' color='primary' variant='outlined'>
             {category}
           </Button>
         </Link>

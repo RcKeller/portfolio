@@ -14,35 +14,73 @@ import LinkIcon from '@material-ui/icons/Link';
 import CodeIcon from '@material-ui/icons/Code';
 
 
+// const styles = theme => ({
+//   listItem: {
+//     margin: "0 0 .7em 0",
+//     transition: "height 1s",
+//     [`@media (min-width: ${theme.mediaQueryTresholds.M}px)`]: {
+//       margin: "0 0 1.5rem 0"
+//     },
+//     [`@media (min-width: ${theme.mediaQueryTresholds.L}px)`]: {
+//       ".moving-featured &, .is-aside &": {
+//         margin: "0 0 0 0"
+//       }
+//     }
+//   },
+//   // icon: {
+//   //   marginRight: 8
+//   // },
+//   content: {
+//     paddingBottom: '0 !important'
+//   },
+//   card: {
+//     // maxWidth: '50em',
+//     // maxWidth: theme.main.sizes.articleMaxWidth,
+//     maxWidth: 960,
+//     margin: '8px auto'
+//   }
+//   // media: {
+//   //   // height: 300,
+//   //   objectFit: 'contain'
+//   // },
+// });
+
 const styles = theme => ({
   listItem: {
-    margin: "0 0 .7em 0",
+    maxWidth: theme.main.sizes.articleMaxWidth,
+    // margin: "0 0 .7em 0",
+    margin: '.7em auto',
     transition: "height 1s",
     [`@media (min-width: ${theme.mediaQueryTresholds.M}px)`]: {
-      margin: "0 0 1.5rem 0"
+      margin: "1.5rem auto"
     },
     [`@media (min-width: ${theme.mediaQueryTresholds.L}px)`]: {
       ".moving-featured &, .is-aside &": {
-        margin: "0 0 0 0"
+        margin: ".7em auto"
       }
     }
   },
-  // icon: {
-  //   marginRight: 8
-  // },
-  content: {
-    paddingBottom: '0 !important'
-  },
   card: {
-    // maxWidth: '50em',
-    // maxWidth: theme.main.sizes.articleMaxWidth,
-    maxWidth: 960,
-    margin: '8px auto'
+    display: 'flex'
+  },
+  details: {
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  content: {
+    flex: '1 0 auto',
+  },
+  cover: {
+    height: 300,
+    width: '100%',
+    maxWidth: 600,
+    objectFit: 'contain',
+    backgroundPosition: 'left',
+    marginLeft: 'auto'
+  },
+  none: {
+    display: 'none'
   }
-  // media: {
-  //   // height: 300,
-  //   objectFit: 'contain'
-  // },
 });
 
 class ListItem extends React.Component {
@@ -75,44 +113,45 @@ class ListItem extends React.Component {
         key={post.node.fields.slug}
       >
         <Card className={classes.card}>
-          <Link
-            activeClassName="active"
-            // className={classes.listLink}
-            to={post.node.fields.slug}
-            onClick={linkOnClick}
-          >
-            {!isAside && !!post.node.frontmatter.cover && <CardMedia
-              // className={classes.media}
-              style={{ objectFit: 'contain', maxHeight: 300, height: post.node.frontmatter.cover.children[0].resolutions.height}}
-              image={post.node.frontmatter.cover.children[0].resolutions.src}
-              // image={post.node.frontmatter.cover.children[0].resolutions.srcSetWebp}
-              // image={post.node.frontmatter.cover.children[0].resolutions.srcSet}
-              title={post.node.frontmatter.title}
-            />}
+          <div className={classes.details}>
             <CardContent className={classes.content}>
-              <Typography color='primary' gutterBottom variant={!isAside ? 'headline' : 'subheading'}>
-                {post.node.frontmatter.title}
-              </Typography>
+              <Link
+                activeClassName="active"
+                to={post.node.fields.slug}
+                onClick={linkOnClick}
+              >
+                <Typography color='primary' gutterBottom variant={!isAside ? 'headline' : 'subheading'}>
+                  {post.node.frontmatter.title}
+                </Typography>
+              </Link>
               <Typography color="textSecondary">
                 {post.node.frontmatter.subtitle}
               </Typography>
             </CardContent>
-          </Link>
-          <CardActions>
-            {post.node.frontmatter.demo && 
-              <Button href={post.node.frontmatter.demo} target='_blank' size="small" color="textSecondary">
-                <LinkIcon style={{ marginRight: 8 }} />
-                Demo
-              </Button>
+            <CardActions>
+              {post.node.frontmatter.demo && 
+                <Button href={post.node.frontmatter.demo} target='_blank' size="small" color="textSecondary">
+                  <LinkIcon style={{ marginRight: 8 }} />
+                  Demo
+                </Button>
+              }
+              {post.node.frontmatter.source && 
+                <Button href={post.node.frontmatter.source} target='_blank' size="small" color="textSecondary">
+                  <CodeIcon style={{ marginRight: 8 }} />
+                  Source
+                </Button>
+              }
+            </CardActions>
+          </div>
+          <CardMedia
+            className = {!isAside && !!post.node.frontmatter.cover
+              ? classes.cover
+              : classes.none
             }
-            {post.node.frontmatter.source && 
-              <Button href={post.node.frontmatter.source} target='_blank' size="small" color="textSecondary">
-                <CodeIcon style={{ marginRight: 8 }} />
-                Source
-              </Button>
-            }
-          </CardActions>
-          </Card>
+            image={post.node.frontmatter.cover.children[0].resolutions.src}
+            title={post.node.frontmatter.title}
+          />
+        </Card>
       </li>
     );
   }
