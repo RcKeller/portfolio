@@ -22,7 +22,6 @@ const styles = theme => ({
 
 const InfoMenu = props => {
   const { classes, pages, categories, linkOnClick, categoryOnClick } = props;
-  console.log(categories)
   return (
     <nav className={classes.infoMenu}>
       {pages.map((page, i) => {
