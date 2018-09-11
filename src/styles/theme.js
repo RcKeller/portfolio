@@ -6,13 +6,13 @@ const theme = createMuiTheme({
   base: {
     colors: {
       background: colors.background,
-      text: colors.dark,
-      link: colors.accent,
-      linkHover: Color(colors.accent)
+      text: colors.superLightGray,
+      link: colors.secondary,
+      linkHover: Color(colors.secondary)
         .lighten(0.1)
         .string(),
       accent: colors.accent,
-      lines: colors.superLightGray
+      lines: colors.lightGray
     },
     sizes: {
       linesMargin: "20px"
@@ -25,12 +25,14 @@ const theme = createMuiTheme({
   },
   info: {
     colors: {
-      text: colors.gray,
+      text: colors.lightGray,
       background: colors.background,
       socialIcons: colors.accent,
       socialIconsHover: colors.lightGray,
-      menuLink: colors.gray,
-      menuLinkHover: colors.accent
+      menuLink: colors.secondary,
+      menuLinkHover: Color(colors.secondary)
+        .lighten(0.1)
+        .string()
     },
     sizes: {
       width: 320,
@@ -45,9 +47,9 @@ const theme = createMuiTheme({
   navigator: {
     colors: {
       background: colors.background,
-      postsListItemLink: colors.gray,
+      postsListItemLink: colors.lightGray,
       postsListItemLinkHover: colors.accent,
-      postsHeader: colors.gray
+      postsHeader: colors.superLightGray
     },
     sizes: {
       closedHeight: 80,
@@ -60,16 +62,16 @@ const theme = createMuiTheme({
   main: {
     colors: {
       background: colors.background,
-      title: colors.gray,
-      subtitle: colors.gray,
-      meta: colors.gray,
-      content: colors.dark,
-      footer: colors.gray,
-      contentHeading: colors.gray,
-      blockquoteFrame: colors.lightGray,
+      title: colors.lightGray,
+      subtitle: colors.lightGray,
+      meta: colors.lightGray,
+      content: colors.superLightGray,
+      footer: colors.lightGray,
+      contentHeading: colors.lightGray,
+      blockquoteFrame: colors.gray,
       link: colors.accent,
-      linkHover: colors.dark,
-      fbCommentsColorscheme: "light"
+      linkHover: colors.superLightGray,
+      fbCommentsColorscheme: "dark"
     },
     sizes: {
       articleMaxWidth: "960px"
@@ -131,8 +133,8 @@ const theme = createMuiTheme({
   bars: {
     colors: {
       background: colors.background,
-      icon: colors.gray,
-      text: colors.gray
+      icon: colors.white,
+      text: colors.white
     },
     sizes: {
       actionsBar: 60,
@@ -144,8 +146,11 @@ const theme = createMuiTheme({
     L: 1024
   },
   palette: {
+    type: 'dark',
     primary: {
-      main: colors.accent
+      main: colors.accent,
+      primary: colors.primary,
+      secondary: colors.secondary
     },
     action: {
       hover: "rgba(0, 0, 0, 0.01)"

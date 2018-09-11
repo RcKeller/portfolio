@@ -73,11 +73,12 @@ const styles = theme => ({
     margin: 0,
     float: "left",
     transitionTimingFunction: "ease",
+    color: `${theme.base.colors.accent}`,
     "& small": {
       display: "block",
       fontSize: ".6em",
       marginTop: ".3em",
-      color: `${theme.base.colors.link}`
+      color: `${theme.palette.primary.main}`
     },
     [`@media (min-width: ${theme.mediaQueryTresholds.M}px)`]: {
       fontSize: `${theme.info.fonts.boxTitleSizeM}em`

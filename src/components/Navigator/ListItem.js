@@ -100,13 +100,13 @@ class ListItem extends React.Component {
           </Link>
           <CardActions>
             {post.node.frontmatter.demo && 
-              <Button href={post.node.frontmatter.demo} target='_blank' size="small" color="primary">
+              <Button href={post.node.frontmatter.demo} target='_blank' size="small" color="textSecondary">
                 <LinkIcon style={{ marginRight: 8 }} />
                 Demo
               </Button>
             }
             {post.node.frontmatter.source && 
-              <Button href={post.node.frontmatter.source} target='_blank' size="small" color="primary">
+              <Button href={post.node.frontmatter.source} target='_blank' size="small" color="textSecondary">
                 <CodeIcon style={{ marginRight: 8 }} />
                 Source
               </Button>
