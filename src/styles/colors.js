@@ -9,8 +9,10 @@
 //   superLightGray: "#dedede"
 // };
 module.exports = {
-  background: "#242a43",
-  foreground: "02021e",
+  foreground: "#242a43",
+  background: "#02021e",
+  // background: "#242a43",
+  // foreground: "#02021e",
   white: "#ffffff",
   accent: "#0077B5",  //  LinkedIn blue
   primary: "#0077B5", //  LinkedIn blue

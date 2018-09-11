@@ -3,9 +3,9 @@ title: info
 ---
 
 Former scientist turned engineer.
-JavaScript guru, security enthusiast.
+JavaScript guru && security enthusiast.
 
-2017 CodeFellows alumni; Graduating B.S. in Informatics June 2019
+Graduating B.S. in Informatics June 2019; 2017 CodeFellows alumni.
 
 Fuelled by lots of ☕.
 

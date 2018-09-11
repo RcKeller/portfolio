@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import injectSheet from "react-jss";
 import Link from "gatsby-link";
 
+import Button from '@material-ui/core/Button';
+
 const styles = theme => ({
   infoMenu: {
     display: "flex",
@@ -12,14 +14,9 @@ const styles = theme => ({
     margin: 0,
     width: "100%"
   },
-  link: {
-    padding: ".5em",
-    fontWeight: 300,
-    textTransform: "lowercase",
-    color: theme.info.colors.menuLink,
-    "&:hover": {
-      color: theme.info.colors.menuLinkHover
-    }
+  button: {
+    padding: '.5em',
+    margin: '.5em'
   }
 });
 
@@ -35,16 +32,19 @@ const InfoMenu = props => {
             key={fields.slug}
             to={fields.slug}
             onClick={linkOnClick}
-            className={classes.link}
             data-shape="closed"
           >
-            {frontmatter.menuTitle ? frontmatter.menuTitle : frontmatter.title}
+            <Button className={classes.button} size='large' color='primary' >
+              {frontmatter.menuTitle ? frontmatter.menuTitle : frontmatter.title}
+            </Button>
           </Link>
         );
       })}
       {categories.map(category => (
-        <Link key={category} to="/" onClick={() => categoryOnClick(category)} className={classes.link} data-shape="closed">
-          {category}
+        <Link key={category} to='/' onClick={() => categoryOnClick(category)} data-shape="closed">
+          <Button className={classes.button} size='large' color='primary'>
+            {category}
+          </Button>
         </Link>
       ))}
       {/* <Link to="/" onClick={() => categoryOnClick('Portfolio')} className={classes.link} data-shape="closed">

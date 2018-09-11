@@ -7,7 +7,8 @@ import IconButton from "@material-ui/core/IconButton";
 
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
-import avatar from "../../images/jpg/avatar.jpg";
+// import avatar from "../../images/jpg/avatar.jpg";
+import avatar from "../../images/png/avatar.png";
 import config from "../../../content/meta/config";
 
 const styles = theme => ({
@@ -78,7 +79,7 @@ const styles = theme => ({
       display: "block",
       fontSize: ".6em",
       marginTop: ".3em",
-      color: `${theme.palette.primary.main}`
+      color: `${theme.base.colors.link}`
     },
     [`@media (min-width: ${theme.mediaQueryTresholds.M}px)`]: {
       fontSize: `${theme.info.fonts.boxTitleSizeM}em`

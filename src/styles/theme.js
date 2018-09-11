@@ -147,10 +147,14 @@ const theme = createMuiTheme({
   },
   palette: {
     type: 'dark',
+    background: {
+      paper: colors.foreground
+    },
     primary: {
       main: colors.accent,
-      primary: colors.primary,
-      secondary: colors.secondary
+      primary: colors.accent,
+      secondary: colors.secondary,
+      // background: colors.foreground,
     },
     action: {
       hover: "rgba(0, 0, 0, 0.01)"
