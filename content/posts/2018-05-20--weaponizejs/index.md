@@ -1,8 +1,8 @@
 ---
 title: "Weaponize.js"
 subtitle: Automated Cross-Site Request Forgery (CSRF)
-category: Portfolio
-# cover: 
+category: Boilerplates
+cover: weaponizejs.png
 source: https://github.com/RcKeller/WeaponizeJS
 tags:
     - Web
