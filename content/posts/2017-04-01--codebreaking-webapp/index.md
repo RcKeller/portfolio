@@ -11,7 +11,7 @@ tags:
     - Go
 ---
 
-Webapp built as an experiment with full stack development and containerized deployment w/ Docker. The objective was to develop a full web service that has a client, back end, and environment provisioning process that all existed independently, but could be built in one step.
+Webapp built as an experiment with full stack development and containerized deployment w/ Docker. The objective was to develop a full web service that has a client, back end, and environment provisioning process that all existed independently, but could be built in one step. This is made possible using docker-compose, which allows us to provision several containers at once.
 
 Technologies:
 

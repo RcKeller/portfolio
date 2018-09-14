@@ -10,4 +10,8 @@ tags:
     - Security
 ---
 
-A software suite used to crack and wipe network devices for UW-IT. SwitchPick is the lockpick to a network switch - attach it via a serial cable and it'll start a conversation, ID the device, and breach it. This was the project that set me down the path of infrastructure automation and a career in DevOps practice.
+This Python software suite automatically identifies, cracks and wipes network devices. Aptly named, it's a lockpick of sorts for network devices, and utilized the built-in features (or vulnerabilities) of vendor products to brute force its way to a state of elevated permissions, after which it wipes the device clean.
+
+This is incredibly useful for network engineers, especially in smaller workplaces. Often times, IT departments with budget constraints have to purchase refurbished or used equipment, which has to be wiped - a process that can take up to 30 minutes. Switchpick automates this procedure and can save hundreds of work hours.
+
+On a low-level, the premise is simple. The program starts listening to serial cable connections on a host machine, sniffing the standard out traffic. If a device-identifying phrase (e.g. brand name, command prompt, etc) is identified, the program begins to breach the device.
