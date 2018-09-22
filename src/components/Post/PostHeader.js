@@ -2,6 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import injectSheet from "react-jss";
 
+import Button from '@material-ui/core/Button';
+
 const styles = theme => ({
   header: {
     margin: "0 0 3em",
@@ -43,10 +45,15 @@ const styles = theme => ({
     fontWeight: theme.main.fonts.meta.weight,
     color: theme.main.colors.meta
   }
+  // button: {
+  //   width: '100%',
+  //   marginBottom: '2em',
+  //   padding: '.5em'
+  // }
 });
 
 const PostHeader = props => {
-  const { classes, title, subtitle, date, cover } = props;
+  const { classes, title, subtitle, date, cover, demo, source } = props;
 
   function myDate(dateString) {
     const dateObj = new Date(dateString).toUTCString();
@@ -64,6 +71,20 @@ const PostHeader = props => {
       <h2 className={classes.subtitle}>{subtitle}</h2>
       <div className={classes.meta}>{myDate(date)}</div>
       <img className={classes.image} src={src} />
+      {source && (
+        <a style={{ textDecoration: 'none' }} href={source} target='_blank'>
+          <Button style={{ width: '100%', marginBottom: '1em' }} size='large' color='primary' variant='outlined'>
+            Source on GitHub
+          </Button>
+        </a>
+      )}
+      {demo && (
+        <a style={{ textDecoration: 'none' }} href={demo} target='_blank'>
+          <Button style={{ width: '100%', marginBottom: '1em' }} size='large' color='primary' variant='outlined'>
+            View Demo
+          </Button>
+        </a>
+      )}
     </header>
   );
 };
@@ -73,7 +94,9 @@ PostHeader.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string,
   cover: PropTypes.object,
-  date: PropTypes.string.isRequired
+  date: PropTypes.string.isRequired,
+  demo: PropTypes.string,
+  source: PropTypes.string
 };
 
 export default injectSheet(styles)(PostHeader);
