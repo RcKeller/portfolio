@@ -8,7 +8,6 @@ import { connect } from "react-redux";
 import screenfull from "screenfull";
 
 import HomeIcon from "@material-ui/icons/Home";
-import SearchIcon from "@material-ui/icons/Search";
 import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
 import FullscreenIcon from "@material-ui/icons/Fullscreen";
 import FullscreenExitIcon from "@material-ui/icons/FullscreenExit";
@@ -97,7 +96,7 @@ class ActionsBar extends React.Component {
   }
 
   homeOnClick = featureNavigator.bind(this);
-  searchOnClick = moveNavigatorAside.bind(this);
+  // searchOnClick = moveNavigatorAside.bind(this);
 
   fullscreenOnClick = () => {
     if (screenfull.enabled) {
@@ -138,7 +137,7 @@ class ActionsBar extends React.Component {
           {((isWideScreen && navigatorShape === "open") || navigatorPosition !== "is-aside") && (
             <CategoryFilter categories={categories} filterCategory={this.categoryFilterOnClick} />
           )}
-          <IconButton
+          {/* <IconButton
             aria-label="Search"
             onClick={this.searchOnClick}
             component={Link}
@@ -148,7 +147,7 @@ class ActionsBar extends React.Component {
             className={classes.button}
           >
             <SearchIcon className={classes.button} />
-          </IconButton>
+          </IconButton> */}
         </div>
         <div className={classes.group}>
           {navigatorPosition === "is-aside" && <FontSetter increaseFont={this.fontSetterOnClick} />}

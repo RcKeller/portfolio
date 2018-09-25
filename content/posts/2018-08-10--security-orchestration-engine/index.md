@@ -1,8 +1,8 @@
 ---
-title: Cybersecurity Workflow Engine
+title: Security Orchestration Engine
 subtitle: Automating triage and remediation for emerging threats
 category: Portfolio
-cover: security-workflow-engine.png
+cover: security-orchestration-engine.png
 date: 08/01/2016
 ---
 
@@ -33,11 +33,11 @@ The processes involved in the triage process spanning from triage to resolution.
 - Given a __Suspicious File__, __inspect it__
 
 # The Solution
-### The Security Workflow Engine
+### The Security Orchestration Engine
 
 ![Map View](./map.png)
 
-The Security Workflow Engine allows users to define **Vectors**, **Services**, and the **Workflows** between the two. This allows security analysts to build-or-buy automation services and automatically route incoming threats to them in real time, effectively automating the process as defined.
+The Security Orchestration Engine allows users to define **Vectors**, **Services**, and the **Workflows** between the two. This allows security analysts to build-or-buy automation services and automatically route incoming threats to them in real time, effectively automating the process as defined.
 
 The engine is defined to allow analysts to create their own use cases, and thus isn't constrained to any particular platform, framework, or system model. It is also organizationally liberating, allowing teams to write their automation solutions with any language or framework they prefer.
 
