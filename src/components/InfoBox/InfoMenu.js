@@ -17,8 +17,9 @@ const styles = theme => ({
   button: {
     width: '100%',
     // padding: '1em'
-    marginBottom: '2em',
-    padding: '.5em'
+    // marginBottom: '2em',
+    padding: '.5em',
+    marginBottom: '1em'
     // padding: '.5em',
     // margin: '.5em'
   }

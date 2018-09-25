@@ -134,13 +134,13 @@ class ListItem extends React.Component {
             </CardContent>
             <CardActions>
               {post.node.frontmatter.demo && 
-                <Button href={post.node.frontmatter.demo} target='_blank' size="small" color="textSecondary">
+                <Button href={post.node.frontmatter.demo} target='_blank' size="small" variant='outlined' color="primary">
                   <LinkIcon style={{ marginRight: 8 }} />
                   Demo
                 </Button>
               }
               {post.node.frontmatter.source && 
-                <Button href={post.node.frontmatter.source} target='_blank' size="small" color="textSecondary">
+                <Button href={post.node.frontmatter.source} target='_blank' size="small" variant='outlined' color="primary">
                   <CodeIcon style={{ marginRight: 8 }} />
                   Source
                 </Button>

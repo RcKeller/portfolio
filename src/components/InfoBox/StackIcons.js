@@ -16,7 +16,15 @@ import NetlifyIcon from "!svg-react-loader!../../images/svg-icons/netlify.svg?na
 const styles = theme => ({
   stack: {
     display: "none",
-    [`@media (min-width: ${theme.mediaQueryTresholds.L}px)`]: {
+    // [`@media (min-width: ${theme.mediaQueryTresholds.L}px)`]: {
+    //   display: "block",
+    //   position: "absolute",
+    //   left: 0,
+    //   bottom: 0,
+    //   width: "100%",
+    //   padding: "1em 2em"
+    // }
+    [`@media (min-height: ${860}px)`]: {
       display: "block",
       position: "absolute",
       left: 0,

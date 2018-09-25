@@ -1,12 +1,12 @@
 ---
 title: IT Project Management Webapp
-subtitle: Used to allocate $5 million annaully across 100 project proposals
+subtitle: Used to allocate $12 million annually across over 100 projects
 category: Portfolio
 cover: project-management-webapp.png
 series: "STF Web App"
 next: Business Process Redesign
 nexturl: /stf-process-redesign
-demo: https://uwstf.org
+# demo: https://uwstf.org
 source: https://github.com/RcKeller/STF-Refresh
 tags:
     - Web

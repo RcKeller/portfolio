@@ -1,5 +1,5 @@
 ---
-title: Professional Recommendations
+title: Testimonials
 menuTitle: Testimonials
 ---
 
