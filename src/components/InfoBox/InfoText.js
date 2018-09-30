@@ -15,6 +15,10 @@ const styles = theme => ({
     },
     "& p:last-child": {
       marginBottom: 0
+    },
+    "& a": {
+      color: 'inherit',
+      textDecoration: 'none'
     }
   }
 });

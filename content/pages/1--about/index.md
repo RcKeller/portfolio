@@ -26,7 +26,7 @@ I am actively interviewing and considering new opportunities. Please reach out i
 - **JavaScript Engineer**
 
 ### Start Dates:
-- **On-Site**: June 2019
+- **On-Site**: March 2019
 - **Remote**: Immediately
 
 ### Resources:
