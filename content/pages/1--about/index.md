@@ -14,6 +14,8 @@ What keeps me going is the drive to not just consume knowledge, but create it. A
 - To challenge my perspective and learn from colleagues
 - To leverage technical skills for social good
 
+<br />
+
 ---
 
 # Availability
