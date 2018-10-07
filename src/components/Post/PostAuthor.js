@@ -15,7 +15,8 @@ const styles = theme => ({
     flexDirection: "column",
     alignItems: "center",
     "& a": {
-      color: theme.base.colors.link
+      color: theme.base.colors.link,
+      textDecoration: 'none'
     },
     [`@media (min-width: ${theme.mediaQueryTresholds.M}px)`]: {
       flexDirection: "row",
@@ -24,9 +25,8 @@ const styles = theme => ({
   },
   avatar: {
     margin: "0 1em 1em",
-    borderRadius: "75% 65%",
-    width: "60px",
-    height: "60px",
+    width: "70px",
+    height: "70px",
     border: "1px solid #ddd",
     flexShrink: 0,
     [`@media (min-width: ${theme.mediaQueryTresholds.M}px)`]: {
