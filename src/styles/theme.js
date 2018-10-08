@@ -7,12 +7,17 @@ const theme = createMuiTheme({
     colors: {
       background: colors.background,
       text: colors.dark,
-      link: colors.accent,
-      linkHover: Color(colors.accent)
+      link: colors.secondary,
+      linkHover: Color(colors.secondary)
         .lighten(0.1)
         .string(),
-      accent: colors.accent,
-      lines: colors.superLightGray
+      icon: colors.primary,
+      iconHover: Color(colors.primary)
+        .lighten(0.1)
+        .string(),
+      main: colors.primary,
+      accent: colors.secondary,
+      lines: colors.quaternary
     },
     sizes: {
       linesMargin: "20px"
@@ -25,12 +30,12 @@ const theme = createMuiTheme({
   },
   info: {
     colors: {
-      text: colors.gray,
+      text: colors.black,
       background: colors.background,
       socialIcons: colors.lightGray,
-      socialIconsHover: colors.accent,
+      socialIconsHover: colors.secondary,
       menuLink: colors.gray,
-      menuLinkHover: colors.accent
+      menuLinkHover: colors.secondary
     },
     sizes: {
       width: 320,
@@ -46,7 +51,7 @@ const theme = createMuiTheme({
     colors: {
       background: colors.background,
       postsListItemLink: colors.gray,
-      postsListItemLinkHover: colors.accent,
+      postsListItemLinkHover: colors.secondary,
       postsHeader: colors.gray
     },
     sizes: {
@@ -60,14 +65,16 @@ const theme = createMuiTheme({
   main: {
     colors: {
       background: colors.background,
-      title: colors.gray,
-      subtitle: colors.gray,
+      // title: colors.gray,
+      // subtitle: colors.gray,
+      title: colors.primary,
+      subtitle: colors.secondary,
       meta: colors.gray,
       content: colors.dark,
       footer: colors.gray,
       contentHeading: colors.gray,
       blockquoteFrame: colors.lightGray,
-      link: colors.accent,
+      link: colors.secondary,
       linkHover: colors.dark,
       fbCommentsColorscheme: "light"
     },
@@ -116,8 +123,8 @@ const theme = createMuiTheme({
       text: Color(colors.gray)
         .lighten(0.5)
         .string(),
-      link: colors.accent,
-      linkHover: Color(colors.accent)
+      link: colors.secondary,
+      linkHover: Color(colors.secondary)
         .lighten(0.2)
         .string()
     },
@@ -144,22 +151,24 @@ const theme = createMuiTheme({
     L: 1024
   },
   palette: {
-    // type: 'light',
-    // background: {
-    //   paper: colors.foreground
-    // },
-    // primary: {
-    //   main: colors.accent,
-    //   primary: colors.primary,
-    //   secondary: colors.secondary,
-    //   tertiary: colors.tertiary,
-    //   quaternary: colors.quaternary,
-    //   quinary: colors.quinary
-    // },
-    primary: { main: colors.primary },
-    secondary: { main: colors.secondary },
+    // primary: { main: colors.primary },
+    // secondary: { main: colors.secondary },
+    primary: { main: colors.secondary },
+    secondary: { main: colors.tertiary },
     action: {
       hover: "rgba(0, 0, 0, 0.01)"
+    }
+  },
+  overrides: {
+    // Name of the component ⚛️ / style sheet
+    MuiButton: {
+      // Name of the rule
+      root: {
+        
+      },
+      outlined: {
+        borderWidth: 'medium !important'
+      }
     }
   },
   typography: {

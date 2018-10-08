@@ -23,7 +23,7 @@ const styles = theme => ({
     "&:hover": {
       "& svg": {
         // fill: theme.info.colors.socialIconsHover
-        fill: theme.base.colors.linkHover
+        fill: theme.base.colors.iconHover
       }
     }
   },
@@ -31,7 +31,7 @@ const styles = theme => ({
     width: "30px",
     height: "30px",
     // fill: theme.info.colors.socialIcons,
-    fill: theme.base.colors.link,
+    fill: theme.base.colors.icon,
     transition: "all .5s"
   }
 });

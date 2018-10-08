@@ -5,7 +5,7 @@ import injectSheet from "react-jss";
 const styles = theme => ({
   text: {
     display: "block",
-    fontWeight: 300,
+    // fontWeight: 300,
     lineHeight: 1.5,
     fontSize: ".95em",
     textAlign: "left",

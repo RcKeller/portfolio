@@ -38,7 +38,7 @@ const InfoMenu = props => {
             onClick={linkOnClick}
             data-shape="closed"
           >
-            <Button className={classes.button} size='large' color='primary' variant='outlined'>
+            <Button className={classes.button} size='large' color='primary'>
               {frontmatter.menuTitle ? frontmatter.menuTitle : frontmatter.title}
             </Button>
           </Link>
@@ -46,7 +46,7 @@ const InfoMenu = props => {
       })}
       {categories.map(category => (
         <Link key={category} to='/' onClick={() => categoryOnClick(category)} data-shape="closed">
-          <Button className={classes.button} size='large' color='primary' variant='outlined'>
+          <Button className={classes.button} size='large' color='primary'>
             {category}
           </Button>
         </Link>
