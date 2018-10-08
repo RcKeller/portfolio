@@ -61,7 +61,8 @@ const styles = theme => ({
     }
   },
   card: {
-    display: 'flex'
+    display: 'flex',
+    backgroundColor: 'rgba(176, 168, 140, 0.05)'
   },
   details: {
     display: 'flex',
