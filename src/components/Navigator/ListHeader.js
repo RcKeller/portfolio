@@ -47,7 +47,7 @@ const styles = theme => ({
     position: "relative",
     fontSize: "1.2em",
     lineHeight: 1,
-    color: theme.base.colors.accent,
+    color: theme.base.colors.tertiary,
     borderBottom: `1px solid ${theme.base.colors.lines}`,
     padding: "0 1em 1em",
     fontWeight: 300,

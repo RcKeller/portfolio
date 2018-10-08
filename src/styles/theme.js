@@ -17,7 +17,11 @@ const theme = createMuiTheme({
         .string(),
       main: colors.primary,
       accent: colors.secondary,
-      lines: colors.quaternary
+      lines: colors.quaternary,
+      secondary: colors.secondary,
+      tertiary: colors.tertiary,
+      quaternary: colors.quaternary,
+      quinary: colors.quinary
     },
     sizes: {
       linesMargin: "20px"
@@ -155,6 +159,7 @@ const theme = createMuiTheme({
     // secondary: { main: colors.secondary },
     primary: { main: colors.secondary },
     secondary: { main: colors.tertiary },
+    textSecondary: { main: colors.quinary },
     action: {
       hover: "rgba(0, 0, 0, 0.01)"
     }
@@ -173,7 +178,8 @@ const theme = createMuiTheme({
   },
   typography: {
     fontFamily: `'Roboto Mono', monospace`,
-    fontSize: 16
+    fontSize: 16,
+    textSecondary: { color: colors.quinary }
   }
 });
 

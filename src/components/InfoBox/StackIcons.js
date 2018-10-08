@@ -9,7 +9,7 @@ import MaterialUiIcon from "!svg-react-loader!../../images/svg-icons/material-ui
 import ReduxIcon from "!svg-react-loader!../../images/svg-icons/redux.svg?name=ReduxIcon";
 import GatsbyIcon from "!svg-react-loader!../../images/svg-icons/gatsby.svg?name=GatsbyIcon";
 import WebpackIcon from "!svg-react-loader!../../images/svg-icons/webpack.svg?name=WebpackIcon";
-import BabelIcon from "!svg-react-loader!../../images/svg-icons/babel.svg?name=BabelIcon";
+import PWAIcon from "!svg-react-loader!../../images/svg-icons/pwa.svg?name=ProgressiveWebAppIcon";
 import NetlifyIcon from "!svg-react-loader!../../images/svg-icons/netlify.svg?name=NetlifyIcon";
 
 const styles = theme => ({
@@ -59,14 +59,14 @@ const StackIcons = props => {
   const { classes } = props;
 
   const items = [
-    { name: "gatsby", url: "https://www.gatsbyjs.org/", comp: GatsbyIcon },
     { name: "react", url: "https://reactjs.org/", comp: ReactIcon },
     { name: "redux", url: "https://redux.js.org/", comp: ReduxIcon },
     { name: "graphql", url: "http://graphql.org/", comp: GraphqlIcon },
     // { name: "jss", url: "http://cssinjs.org/", comp: JssIcon },
     // { name: "material-ui", url: "https://material-ui-next.com/", comp: MaterialUiIcon },
     { name: "webpack", url: "https://webpack.js.org/", comp: WebpackIcon },
-    { name: "babel", url: "https://babeljs.io/", comp: BabelIcon }
+    { name: "gatsby", url: "https://www.gatsbyjs.org/", comp: GatsbyIcon },
+    { name: "progressivewebapp", url: "https://developers.google.com/web/progressive-web-apps/", comp: PWAIcon }
     // { name: "netlify", url: "https://www.netlify.com/", comp: NetlifyIcon }
   ];
 
