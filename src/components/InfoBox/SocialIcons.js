@@ -25,14 +25,14 @@ const styles = theme => ({
     padding: "5px",
     "&:hover": {
       "& svg": {
-        fill: theme.info.colors.socialIconsHover
+        fill: theme.base.colors.linkHover
       }
     }
   },
   svg: {
     width: "30px",
     height: "30px",
-    fill: theme.info.colors.socialIcons,
+    fill: theme.base.colors.link,
     transition: "all .5s"
   }
 });

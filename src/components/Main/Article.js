@@ -14,7 +14,7 @@ const styles = theme => ({
     "& a": {
       fontWeight: "bold",
       letterSpacing: "-.02em",
-      textDecoration: "underline",
+      textDecoration: "none",
       transition: "0.3s",
       "&:hover": {
         color: theme.base.colors.linkHover

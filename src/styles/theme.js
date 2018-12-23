@@ -172,7 +172,7 @@ const theme = createMuiTheme({
   },
   typography: {
     fontFamily: `'IBM Plex Mono', monospace`,
-    fontSize: 16,
+    fontSize: 18,
     textSecondary: { color: colors.quinary }
   }
 });
