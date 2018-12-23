@@ -15,7 +15,10 @@ const styles = theme => ({
     display: "flex",
     justifyContent: "space-around",
     flexWrap: "wrap",
-    margin: '2em auto'
+    margin: '2em auto',
+    [`@media (max-height: ${1366}px)`]: {
+      margin: '1em auto'
+    }
   },
   link: {
     display: "inline-block",

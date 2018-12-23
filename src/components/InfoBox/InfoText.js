@@ -12,6 +12,12 @@ const styles = theme => ({
     "& p:first-child": {
       marginTop: 0
     },
+    "& p:nth-child(2)": {
+      display: "none",
+      [`@media (min-height: ${900}px)`]: {
+        display: 'block'
+      }
+    },
     "& p:last-child": {
       marginBottom: 0
     },
