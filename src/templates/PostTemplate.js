@@ -21,12 +21,12 @@ class PostTemplate extends React.Component {
   }
 
   render() {
-    const { data, pathContext } = this.props;
+    const { data, pathContext, navigatorPosition, navigatorShape } = this.props;
     const facebook = (((data || {}).site || {}).siteMetadata || {}).facebook;
-
+    const authorInSidebar = (navigatorPosition === 'is-aside' || navigatorPosition === 'is-featured') && navigatorShape === 'closed'
     return (
       <Main>
-        <Post post={data.post} slug={pathContext.slug} author={data.author} facebook={facebook} />
+        <Post post={data.post} slug={pathContext.slug} author={data.author} showAuthor={!authorInSidebar} facebook={facebook} />
         <Footer footnote={data.footnote} />
         <Seo data={data.post} facebook={facebook} />
       </Main>

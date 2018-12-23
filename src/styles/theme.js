@@ -19,7 +19,7 @@ const theme = createMuiTheme({
     },
     fonts: {
       unstyledFamily: `monospace`,
-      styledFamily: "Roboto Mono",
+      styledFamily: "IBM Plex Mono",
       styledFonts: "300,400,600"
     }
   },
@@ -171,7 +171,7 @@ const theme = createMuiTheme({
     }
   },
   typography: {
-    fontFamily: `'Roboto Mono', monospace`,
+    fontFamily: `'IBM Plex Mono', monospace`,
     fontSize: 16,
     textSecondary: { color: colors.quinary }
   }

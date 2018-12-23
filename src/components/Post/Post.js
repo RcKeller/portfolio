@@ -7,7 +7,7 @@ import Content from "../Main/Content";
 import PostFooter from "./PostFooter";
 
 const Post = props => {
-  const { post, author, slug, facebook } = props;
+  const { post, author, showAuthor, slug, facebook } = props;
   const frontmatter = (post || {}).frontmatter;
   const title = ((post || {}).frontmatter || {}).title;
   const subtitle = ((post || {}).frontmatter || {}).subtitle;
@@ -17,12 +17,11 @@ const Post = props => {
   const date = ((post || {}).fields || {}).prefix;
   const html = (post || {}).html;
   const htmlAst = (post || {}).htmlAst;
-
   return (
     <Article>
       <PostHeader title={title} subtitle={subtitle} date={date} cover={cover} demo={demo} source={source} />
       <Content html={html} />
-      <PostFooter author={author} post={post} slug={slug} facebook={facebook} />
+      <PostFooter author={author} showAuthor={showAuthor} post={post} slug={slug} facebook={facebook} />
     </Article>
   );
 };
@@ -30,6 +29,7 @@ const Post = props => {
 Post.propTypes = {
   post: PropTypes.object.isRequired,
   author: PropTypes.object.isRequired,
+  showAuthor: PropTypes.bool.isRequired,
   slug: PropTypes.string.isRequired,
   facebook: PropTypes.object.isRequired
 };

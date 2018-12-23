@@ -118,7 +118,7 @@ class TopMenu extends React.Component {
                     {authorSocialLinks.map((link) => {
                       const { name, url } = link;
                       return (
-                        <a href={url} target='_blank'>
+                        <a key={url} href={url} target='_blank'>
                           <MenuItem>
                             {name}
                           </MenuItem>
