@@ -1,5 +1,6 @@
 ---
-title: "Nice to meet you."
+title: "Hi - I'm Keller"
+subtitle: "Nice to meet you."
 menuTitle: About
 ---
 

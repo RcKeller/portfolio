@@ -160,9 +160,20 @@ const theme = createMuiTheme({
       hover: "rgba(0, 0, 0, 0.01)"
     }
   },
+  overrides: {
+    // Name of the component ⚛️ / style sheet
+    MuiButton: {
+      // Name of the rule
+      root: {},
+      outlined: {
+        borderWidth: 'medium !important'
+      }
+    }
+  },
   typography: {
     fontFamily: `'Roboto Mono', monospace`,
-    fontSize: 16
+    fontSize: 16,
+    textSecondary: { color: colors.quinary }
   }
 });
 
