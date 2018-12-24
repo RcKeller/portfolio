@@ -156,6 +156,7 @@ const theme = createMuiTheme({
       secondary: colors.secondary,
       // background: colors.foreground,
     },
+    secondary: { main: colors.secondary },
     action: {
       hover: "rgba(0, 0, 0, 0.01)"
     }

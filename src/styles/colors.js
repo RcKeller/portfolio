@@ -5,7 +5,8 @@ module.exports = {
   white: "#ffffff",
   accent: "#61AFEF", //  LinkedIn blue
   primary: "#98C379", //  LinkedIn blue
-  secondary: "#C678DD", //  LinkedIn blue
+  secondary: '#98C379',
+  tertiary: "#C678DD", //  LinkedIn blue
   bright: "#ffffff",
   dark: "#333333",
   gray: "#555555",

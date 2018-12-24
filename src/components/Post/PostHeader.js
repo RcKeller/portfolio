@@ -73,14 +73,14 @@ const PostHeader = props => {
       <img className={classes.image} src={src} />
       {source && (
         <a style={{ textDecoration: 'none' }} href={source} target='_blank'>
-          <Button style={{ width: '100%', marginBottom: '1em' }} size='large' color='primary' variant='outlined'>
+          <Button style={{ width: '100%', marginBottom: '1em' }} size='large' color='secondary' variant='outlined'>
             Source on GitHub
           </Button>
         </a>
       )}
       {demo && (
         <a style={{ textDecoration: 'none' }} href={demo} target='_blank'>
-          <Button style={{ width: '100%', marginBottom: '1em' }} size='large' color='primary' variant='outlined'>
+          <Button style={{ width: '100%', marginBottom: '1em' }} size='large' color='secondary' variant='outlined'>
             View Demo
           </Button>
         </a>
