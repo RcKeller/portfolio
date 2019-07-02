@@ -31,6 +31,10 @@ menuTitle: Testimonials
 
 **Shane McDowell** - *Technology Manager at University of Washington*
 
+> Ryan serves as a technical lead for Cyber Operations Development and has distinguished himself with his in-depth knowledge and collaborative approach. His contributions have significantly improved the performance of his team and align well with the organization's mission.
+
+**Anthony Johnson** - VP of Security Operations & Intelligence at Capital One
+
 ---
 
 *Source: LinkedIn & Email*

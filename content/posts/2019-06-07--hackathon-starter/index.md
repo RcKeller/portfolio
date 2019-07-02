@@ -1,7 +1,7 @@
 ---
-title: Hackathon Starter w/ CI/CD
-subtitle: Based on lessons learned from success and failure
-category: Boilerplate
+title: Hackathon Starter
+subtitle: Using CI/CD pipelines and testing as a competitive advantage
+category: Boilerplates
 cover: hackathon-starter.png
 date: 06/07/2019
 demo: https://circleci.com/gh/RcKeller/hackathon-starter

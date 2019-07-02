@@ -153,6 +153,12 @@ class ListItem extends React.Component {
               : classes.none
             }
             image={post.node.frontmatter.cover.children[0].resolutions.src}
+            // image=''
+            // image = {
+            //   post.node.frontmatter.cover && post.node.frontmatter.cover.children
+            //     ? post.node.frontmatter.cover.children[0].resolutions.src
+            //     : ''
+            //     }
             title={post.node.frontmatter.title}
           />
         </Card>

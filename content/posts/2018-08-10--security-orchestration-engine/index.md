@@ -35,19 +35,19 @@ The processes involved in the triage process spanning from triage to resolution.
 # The Solution
 ### The Security Orchestration Engine
 
-![Map View](https://i.imgur.com/DT1bf9l.png)
+<img width=100% src="https://i.imgur.com/DT1bf9l.png"/>
 
 The Security Orchestration Engine allows users to define **Vectors**, **Services**, and the **Workflows** between the two. This allows security analysts to build-or-buy automation services and automatically route incoming threats to them in real time, effectively automating the process as defined.
 
 The engine is defined to allow analysts to create their own use cases, and thus isn't constrained to any particular platform, framework, or system model. It is also organizationally liberating, allowing teams to write their automation solutions with any language or framework they prefer.
 
-![Table View](https://i.imgur.com/cuiGjWb.png)
+<img width=100% src="https://i.imgur.com/cuiGjWb.png)"/>
 
 This system ties directly with other SIEM solutions, allowing cases to automatically be updated based on workflow results. Workflows can be configured to either run automatically, or be queued up as "suggested" tasks.
 
 ## Additional Value
 
-![Dashboard View](https://i.imgur.com/o2yUdxj.png)
+<img width=100% src="https://i.imgur.com/o2yUdxj.png)"/>
 
 This system leverages a veritable goldmine of actionable data - by profiling threats as they occur, you can effectively map out the threat landscape and risk across an organization. This was very well received and ends up offering immense value to security teams and executives.
 
