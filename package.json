@@ -76,5 +76,8 @@
     "redux": "^4.0.0",
     "redux-devtools-extension": "^2.13.5",
     "screenfull": "^3.3.2"
+  },
+  "resolutions": {
+    "sharp": "0.22.1"
   }
 }
