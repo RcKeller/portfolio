@@ -7,7 +7,7 @@ import fs from 'fs'
 import { join } from 'path'
 
 // Add markdown files in `src/content/blog`
-const postsDirectory = join(process.cwd(), 'src', 'content', 'blog')
+const postsDirectory = join(process.cwd(), 'content', 'blog')
 
 export function getPostBySlug(slug) {
   const realSlug = slug.replace(/\.md$/, '')

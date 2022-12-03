@@ -5,6 +5,9 @@ import { remark } from 'remark'
 import html from 'remark-html'
 import { getPostBySlug, getAllPosts } from '../../lib/blog'
 
+import Layout from "../../components/layout"
+import SEO from "../../components/seo"
+
 export async function getStaticProps({ params }) {
   const post = getPostBySlug(params.slug)
   const markdown = await remark()
@@ -34,3 +37,34 @@ export async function getStaticPaths() {
     fallback: false,
   }
 }
+
+const BlogPost = post => {
+  return (
+    <Layout>
+      <SEO
+        title={post.frontmatter.title}
+        description={post.frontmatter.description || post.excerpt}
+      />
+      <article
+        className="blog-post"
+        itemScope
+        itemType="http://schema.org/Article"
+      >
+        <header>
+          <h1 itemProp="headline">{post.frontmatter.title}</h1>
+          <p>{post.frontmatter.date}</p>
+        </header>
+        <section
+          dangerouslySetInnerHTML={{ __html: post.content }}
+          itemProp="articleBody"
+        />
+        <hr />
+        <footer>
+          {/* <Bio /> */}
+        </footer>
+      </article>
+    </Layout>
+  )
+}
+
+export default BlogPost
