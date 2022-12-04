@@ -8,6 +8,8 @@ import { getPostBySlug, getAllPosts } from '../lib/posts'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+import { Container, Card, Row, Text } from "@nextui-org/react";
+
 export async function getStaticProps({ params }) {
   console.warn('GET POST')
   const post = getPostBySlug(params.slug)
@@ -42,20 +44,19 @@ export async function getStaticPaths() {
 const BlogPost = post => {
   console.warn('POST', post)
   return (
-    <Layout>
+    <Container>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
       <article
-        className="blog-post"
         itemScope
         itemType="http://schema.org/Article"
       >
-        <header>
-          <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
-        </header>
+        <Card as="header" variant="flat">
+          <Text itemProp="headline" h1>{post.frontmatter.title}</Text>
+          <Text h6>{post.frontmatter.date}</Text>
+        </Card>
         <section
           dangerouslySetInnerHTML={{ __html: post.content }}
           itemProp="articleBody"
@@ -65,7 +66,7 @@ const BlogPost = post => {
           {/* <Bio /> */}
         </footer>
       </article>
-    </Layout>
+    </Container>
   )
 }
 

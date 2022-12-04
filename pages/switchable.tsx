@@ -17,7 +17,7 @@ export default function Switchable() {
           {/* <AcmeLogo /> */}
           {/* <FontAwesomeIcon icon={fa0} /> */}
           {/* <FontAwesomeIcon icon="fa-github" /> */}
-          <FontAwesomeIcon icon="fa-brands fa-github" />
+          
           <Text b color="inherit" hideIn="xs">
             ACME
           </Text>

@@ -8,11 +8,13 @@ import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 // 1. Import `createTheme`
 import { createTheme, NextUIProvider } from "@nextui-org/react"
-import { ThemeProvider as NextThemesProvider } from 'next-themes';
+import { ThemeProvider as NextThemesProvider, useTheme as useNextTheme } from 'next-themes';
+import { Navbar, Button, Link, Text, Switch, useTheme } from "@nextui-org/react";
 
 // https://fontawesome.com/docs/web/use-with/react/use-with
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
+import Layout from "../components/Layout/";
 config.autoAddCss = false
 
 // 2. Call `createTheme` and pass your custom values
@@ -56,18 +58,21 @@ const darkTheme = createTheme({
 
 
 export default function App({ Component, pageProps }: AppProps) {
+  const { setTheme } = useNextTheme();
+  const { isDark, type } = useTheme();
+  
   return (
     <NextThemesProvider
-    defaultTheme="system"
-    attribute="class"
-    value={{
-      light: lightTheme.className,
-      dark: darkTheme.className
-    }}
-  >
-  <NextUIProvider>
-    <Component {...pageProps} />
-    </NextUIProvider>
+      defaultTheme="system"
+      attribute="class"
+      value={{
+        light: lightTheme.className,
+        dark: darkTheme.className
+      }}
+    >
+      <NextUIProvider>
+        <Layout><Component {...pageProps} /></Layout>
+      </NextUIProvider>
     </NextThemesProvider>
   )
 }
