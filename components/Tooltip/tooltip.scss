@@ -1,0 +1,172 @@
+@import "../../styles/media-queries.scss";
+
+.tooltip{
+    background-color: $tooltip-background;
+    border: 0;
+    border-color: $tooltip-border;
+    border-radius: 0.125rem;
+    box-shadow: $tooltip-shadow;
+    color: $tooltip-text;
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 0.875rem;
+    max-width: 18.75rem;
+    opacity: 0;
+    padding: 0;
+    pointer-events: none;
+    position: absolute;
+    text-align: center;
+    transition: $transition-primary;
+    white-space: nowrap;
+    z-index: $tooltip-z;
+    
+
+    &.left-point{
+        &::before{
+            left: -0.25rem;
+            border-right-color: inherit;
+            top: 50%;
+            margin-top: -0.3125rem;
+            border-bottom-color: transparent;
+        }
+        &::after{
+            left: -6px;
+            border-right-color: #3F4755;
+            top: 50%;
+            margin-top: -0.3125rem;
+            border-bottom-color: transparent;
+        }
+    }
+
+    &.right-point{
+        &::before{
+            right: -0.5625rem;
+            border-left-color: inherit;
+            top: 50%;
+            margin-top: -0.3125rem;
+            border-bottom-color: transparent;
+        }
+        &::after{
+            right: -0.6875rem;
+            border-left-color: #3F4755;
+            top: 50%;
+            margin-top: -0.3125rem;
+            border-bottom-color: transparent;
+        }
+    }
+
+    &.up-point{
+        &::before{
+            top: -0.5rem;
+            border-bottom-color: inherit;
+            left: 50%;
+            margin-left: -0.3125rem;
+            border-right-color: transparent;
+        }
+        &::after{
+            top: -0.625rem;
+            border-bottom-color: #3F4755;
+            left: 50%;
+            margin-left: -0.3125rem;
+            border-right-color: transparent;
+        }
+    }
+
+    &.down-point{
+        &::before{
+            bottom: -0.5rem;
+            border-top-color: inherit;
+            border-left-color: transparent;
+        }
+        &::after{
+            bottom: -0.5625rem;
+            border-top-color: #3F4755;
+            border-left-color: transparent;
+            border-bottom-color: transparent;
+        }
+
+        &.left-side{
+            &::before{
+                left: 1rem;
+                margin-right: 0.5rem;
+            }
+
+            &::after{
+                left: 1rem;
+                margin-right: -0.5rem;
+            }
+        }
+
+        &.right-side{
+            &::before{
+                right: 0.625rem;
+                margin-left: -0.3125rem;
+            }
+
+            &::after{
+                right: 0.625rem;
+                margin-left: -0.3125rem;
+            }
+        }
+    }
+
+    &.back-tip{
+        right: -9.375rem;
+        top: 0.325rem;
+    }
+
+    &.home-tip{
+        right: 6.75rem;
+        top: 1.375rem;
+    }
+
+    &.folder-tip{
+        right: -7.75rem;
+        top: 0.325rem;
+    }
+
+    &.link-tip{
+        bottom: -1.625rem;
+    }
+
+    &.light-mode-tip{
+        left: -7.5rem;
+    }
+
+    &.info-tip{
+        top: -1.875rem;
+        left: -2.25rem;
+    }
+
+    &.social-tip{
+        top: -1.875rem;
+        right: -2.75rem;
+    }
+
+    &::before{
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        margin-left: -0.3125rem;
+        border: 0.3125rem solid transparent;
+        border-bottom-width: 0.25rem;
+        z-index: $tooltip-before-z;
+    }
+
+    &::after{
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        margin-left: -0.3125rem;
+        border: 0.3125rem solid transparent;
+        border-bottom-color: #3F4755;
+        border-bottom-width: 0.25rem;
+        z-index: $tooltip-after-z;
+    }
+
+    .tooltip-body{
+        padding: 0.3125rem 0.625rem;
+    }
+}

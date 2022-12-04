@@ -1,0 +1,160 @@
+@import "../../styles/media-queries.scss";
+
+.nav{
+    background: $background-color;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    left: 0;
+    position: fixed;
+    right: 0;
+    z-index: $nav-z;
+    transition: $transition-primary;
+
+    &.open{
+        left: 16.5625rem;
+        .nav-inner-box{
+            &.center {
+                @media (max-width: $breakpoint-750) {
+                    display: none;
+                }
+                
+            }
+            &.right{
+                @media (max-width: $breakpoint-phone) {
+                    display: none;
+                }
+            }
+            .button-box{
+                .icon{
+                    @media (hover: hover) {
+                        &:hover{
+                            #bar{
+                                fill-opacity: 0.4;
+                            }
+                        }
+                    }
+                    
+                    &.back-arrow{
+                        @media (max-width: $breakpoint-phone) {
+                            display: none;
+                        }
+                    }
+                    
+                    path{
+                        fill-opacity: 1;
+                    }
+                }
+            }
+        }
+        .menu-close{
+            @media (max-width: $breakpoint-tablet) {
+                opacity: 0.5;
+                pointer-events: all;
+            }
+        }
+    }
+    
+    .nav-inner-box{
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        height: 4rem;
+        opacity: 1;
+        position: relative;
+        top: 0;
+        transition: $transition-primary;
+        z-index: $nav-inner-z;
+
+        &.left{
+            margin-left: 0.875rem;
+        }
+
+        &.right{
+            margin-right: 0.875rem;
+        }
+
+        &.center{
+            left: 50%;
+            position: absolute;
+            transform: translateX(-50%);
+        }
+       
+        .button-box{
+            display: flex;
+            margin: 0;
+            pointer-events: all;
+            
+            .icon{
+                align-items: center;
+                box-sizing: content-box;
+                display: flex;
+                justify-content: center;
+                height: 2rem;
+                padding: 0 0.125rem;
+                position: relative;
+                width: 1.75rem;
+
+                &.back-arrow{
+                    width: 1.25rem;
+                }
+            }
+        }
+
+        .nav-link-box{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+
+            .nav-anchor{
+                color: $white;
+                font-weight: 600;
+                font-size: 1rem;
+                margin-bottom: 0.125rem;
+                margin-top: 0.25rem;
+            }
+            .nav-link{
+                color: $text-color-secondary;
+                font-size: 0.75rem;
+
+                @media (hover: hover) {
+                    &:hover{
+                        color: $link-hover;
+                    }
+                }   
+            }
+        }
+
+        .toast-box{
+            background: $background-color;
+            border: 0.0625rem solid $border-color;
+            border-radius: 0.125rem;
+            padding: 1rem 6rem;
+            position: absolute;
+            right: 1rem;
+            white-space: nowrap;
+            transition: $transition-primary;
+            z-index: $nav-toast-z;
+
+            &.show{
+                top: 4.25rem
+            }
+
+            &.hide{
+                top: -12rem;
+            }
+        }
+    }
+
+    .menu-close{
+        background: $overlay-background;
+        height: 100%;
+        left: 0;
+        opacity: 0;
+        pointer-events: none;
+        position: fixed;
+        right: 0;
+        transition: $transition-primary;
+    }
+}
+

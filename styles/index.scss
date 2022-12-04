@@ -1,4 +1,8 @@
 @import "./media-queries.scss";
+// TODO: refactor out
+@import "../components/Menu/menu.scss";
+@import "../components/Nav/nav.scss";
+@import "../components/Tooltip/tooltip.scss";
 
 // @font-face {
 //     font-family: AtlasGrotesk-Regular;
