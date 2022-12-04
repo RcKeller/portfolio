@@ -1,0 +1,170 @@
+@import "./media-queries.scss";
+
+.anchor-set{
+    left: 0;
+    padding: 1.5rem 0;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: $transition-primary;
+    
+
+    @media (max-width: $breakpoint-1000) {           
+        display: none;
+    }
+
+    &.menu-open{
+        left: 16.5625rem;
+
+        @media (max-width: $breakpoint-1300) {           
+            display: none;
+        }
+        @media (hover: hover) {
+            &:hover{
+                left: 16.25rem;
+            }
+        }   
+        @media (hover: hover) {
+            &:hover{
+                left: 16.25rem;
+            }
+        }   
+        .anchor{
+            &.lv1{
+                .anchor-text{
+                    @media (max-width: $breakpoint-1400) {           
+                        max-width: 6.25rem;
+                    }
+                }
+            }
+            &.lv2{
+                .anchor-text{
+                    @media (max-width: $breakpoint-1400) {           
+                        max-width: 5.5rem;
+                    }
+                }
+            }
+            
+            .anchor-text{
+                @media (max-width: $breakpoint-1400) {           
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    width: auto;
+                }
+            }
+        }
+        
+    }
+    @media (hover: hover) {
+        &:hover{
+            left: -0.5rem;
+            .anchor{
+                width: auto;
+                &:before{
+                    opacity: 1;
+                    transition: $transition-primary;
+                    width: 0;
+                }
+                &.lv1{
+                    &:before{
+                        left: -2rem;
+                    }
+                }
+                &.lv2{
+                    &:before{
+                        left: -1.5rem;
+                    }
+                }
+    
+                &.lv3{
+                    &:before{
+                        left: -1.25rem;
+                    }
+                }
+                .anchor-text{
+                    left: 0rem;
+                    opacity: 1;
+                    width: 100%;
+                }
+            }
+        }
+    }   
+
+    .anchor{
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding-left: 0.25rem;
+
+        &:before{
+            background: $anchor-line;
+            content: '';
+            height: 0.125rem;
+            margin: 0;
+            opacity: 1;
+            position: relative;
+            left: 0rem;
+            transition: $transition-primary;
+        }
+
+        &.lv1{
+            &:before{
+                width: 1.75rem;
+            }
+            .anchor-text{
+                padding-left: 0;
+                max-width: 8rem;
+                @media (max-width: $breakpoint-1200) {           
+                    max-width: 6.25rem;
+                }
+            }
+        }
+        &.lv2{
+            &:before{
+                width: 1.25rem;
+            }
+            .anchor-text{
+                padding-left: 0.75rem;
+                max-width: 7.25rem;
+
+                @media (max-width: $breakpoint-1200) {           
+                    max-width: 5.5rem;
+                }
+            }
+        }
+
+        a{     
+            display: block;
+            position: relative;
+            
+            @media (hover: hover) {
+                &:hover{
+                    .anchor-text{
+                        color: $link-hover;
+                    }
+                }
+            }
+            .anchor-text{
+                color: $text-color-secondary;
+                left: -1rem;
+                position: relative;
+                padding: 0.25rem 1rem 0.25rem 0.25rem;
+                opacity: 0;
+                transition: $transition-primary;
+                width: 0;
+                white-space: nowrap;
+
+                @media (max-width: $breakpoint-1200) {           
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+        }
+
+        
+    }
+
+}

@@ -20,7 +20,7 @@ export function getPostBySlug(slug) {
 
   const fileContents = fs.readFileSync(fullPath, 'utf8')
   const { data, content } = matter(fileContents)
-  console.warn( { fullPath, matchedFile, data: data.date })
+  // console.warn( { fullPath, matchedFile, data: data.date })
   const rawDate = matchedFile.includes('--') ? matchedFile.split('--')[0] : data.date
   const date = format(parseISO(rawDate), 'yyyy-mm-dd')
   // const date = format(parseISO(data.date), 'MMMM dd, yyyy')
