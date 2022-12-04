@@ -3,12 +3,13 @@
 // Install remark and remark-html
 import { remark } from 'remark'
 import html from 'remark-html'
-import { getPostBySlug, getAllPosts } from '../../lib/blog'
+import { getPostBySlug, getAllPosts } from '../lib/posts'
 
-import Layout from "../../components/layout"
-import SEO from "../../components/seo"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
 
 export async function getStaticProps({ params }) {
+  console.warn('GET POST')
   const post = getPostBySlug(params.slug)
   const markdown = await remark()
     .use(html)
@@ -39,6 +40,7 @@ export async function getStaticPaths() {
 }
 
 const BlogPost = post => {
+  console.warn('POST', post)
   return (
     <Layout>
       <SEO

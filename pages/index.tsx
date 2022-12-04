@@ -1,8 +1,29 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from "next/link"
 import styles from '../styles/Home.module.css'
 
-export default function Home() {
+import { getAllPosts } from "../lib/posts"
+
+export async function getStaticProps() {
+  const posts = getAllPosts()
+
+  return {
+    props: {
+      posts,
+    },
+  }
+}
+
+// export default function Home() {
+//   const posts = []
+export default function Home({ posts }) {
+  if (posts.length === 0) {
+    return (
+      <p>No blog posts found. Add markdown posts to &nbsp;content&nbsp;.</p>
+    )
+  }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -51,6 +72,35 @@ export default function Home() {
               Instantly deploy your Next.js site to a public URL with Vercel.
             </p>
           </a>
+
+          {posts.map(post => {
+            const title = post.frontmatter.title || post.slug
+            return (
+              <article
+                key={post.slug}
+                className="post-list-item"
+                itemScope
+                itemType="http://schema.org/Article"
+              >
+                <header>
+                  <h2>
+                    <Link href={post.slug} itemProp="url">
+                      <span itemProp="headline">{title}</span>
+                    </Link>
+                  </h2>
+                  <small>{post.frontmatter.date}</small>
+                </header>
+                <section>
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: post.frontmatter.description || post.excerpt,
+                    }}
+                    itemProp="description"
+                  />
+                </section>
+              </article>
+            )
+          })}
         </div>
       </main>
 
