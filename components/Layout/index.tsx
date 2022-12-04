@@ -26,13 +26,13 @@ export default function Layout({ children }) {
             </Text>
             </Navbar.Brand>
             <Navbar.Content hideIn="xs" variant="underline">
-            <Navbar.Link isActive={route === '/[slug]'} href="/switchpick">Projects</Navbar.Link>
+            <Navbar.Link isActive={route === '/[slug]' && pathname !== '/testimonials'} href="/switchpick">Projects</Navbar.Link>
             <Navbar.Link isActive={pathname === '/testimonials'} href="/testimonials">Testimonials</Navbar.Link>
             <Navbar.Link href="/resume.pdf" target="_blank">Resume</Navbar.Link>
             </Navbar.Content>
             <Navbar.Content>
-            <Navbar.Link color="inherit" href="#">
-                Login
+            <Navbar.Link color="inherit" href="https://github.com/rckeller">
+                GitHub
             </Navbar.Link>
             <Navbar.Item>
                 <Switch
