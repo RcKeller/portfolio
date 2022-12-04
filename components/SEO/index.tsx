@@ -1,7 +1,7 @@
 // src/components/seo.js
 
 import Head from 'next/head'
-import config from '../lib/config'
+import config from '../../lib/config'
 
 export default function SEO({ description, title }) {
   const siteTitle = config.title
