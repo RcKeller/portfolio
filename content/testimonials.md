@@ -1,6 +1,7 @@
 ---
 title: Testimonials
 menuTitle: Testimonials
+date: "2022-12-01"
 ---
 
 > ...Ryan took on a technical lead role among his fellow interns, demonstrated expert knowledge of our teams core technologies, and a willingness to collaborate that make him a good fit for Capital One. Beyond his technical skills, I was impressed with his willingness to go above and beyond his duties as an intern by assisting teams across the Cyber division with their existing projects. ...Ryan is a valued member of the team with great potential, and I am confident that he has a successful career ahead of him.

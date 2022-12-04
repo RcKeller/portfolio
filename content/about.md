@@ -2,6 +2,7 @@
 title: "Hi - I'm Keller"
 subtitle: "Nice to meet you."
 menuTitle: About
+date: "2022-12-01"
 ---
 
 For the past five years, I have pushed myself to explore many technical verticals including quantitative science, web development, DevOps and cybersecurity. I began my career as a researcher in the midwest and moved to Seattle to gain industry experience and an advanced education, taking some time in-between to intern in Washington, DC.

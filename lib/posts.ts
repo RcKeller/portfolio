@@ -12,14 +12,18 @@ const postsDirectory = join(process.cwd(), 'content')
 export function getPostBySlug(slug) {
   const realSlug = slug.replace(/\.md$/, '')
   const dirContents = fs.readdirSync(postsDirectory)
-  const fullPath = join(postsDirectory, dirContents.find((fileName) => {
+  const matchedFile = dirContents.find((fileName) => {
     const fileNameWithoutSlug = (fileName.includes('--') ? fileName.split('--')[1] : fileName).replace(/\.md$/, '')
     return fileNameWithoutSlug === realSlug
-  }))
+  })
+  const fullPath = join(postsDirectory, matchedFile)
 
   const fileContents = fs.readFileSync(fullPath, 'utf8')
   const { data, content } = matter(fileContents)
-  const date = format(parseISO(data.date), 'MMMM dd, yyyy')
+  console.warn( { fullPath, matchedFile, data: data.date })
+  const rawDate = matchedFile.includes('--') ? matchedFile.split('--')[0] : data.date
+  const date = format(parseISO(rawDate), 'yyyy-mm-dd')
+  // const date = format(parseISO(data.date), 'MMMM dd, yyyy')
 
   return { slug: realSlug, frontmatter: { ...data, date }, content }
 }
