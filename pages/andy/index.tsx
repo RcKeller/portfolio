@@ -1,9 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Link from "next/link"
-import styles from '../styles/Home.module.css'
+import Link from 'next/link'
+import styles from '../../styles/Home.module.css'
 
-import { getAllPosts } from "../lib/posts"
+import { getAllPosts } from '../../lib/posts'
 
 export async function getStaticProps() {
   const posts = getAllPosts()
@@ -15,9 +15,7 @@ export async function getStaticProps() {
   }
 }
 
-// export default function Home() {
-//   const posts = []
-export default function Home({ posts }) {
+export default function AndyHome({ posts }) {
   if (posts.length === 0) {
     return (
       <p>No blog posts found. Add markdown posts to &nbsp;content&nbsp;.</p>
@@ -73,7 +71,7 @@ export default function Home({ posts }) {
             </p>
           </a>
 
-          {posts.map(post => {
+          {posts.map((post) => {
             const title = post.frontmatter.title || post.slug
             return (
               <article

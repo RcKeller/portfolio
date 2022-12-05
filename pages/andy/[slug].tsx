@@ -1,16 +1,12 @@
-// src/pages/[slug].js
-
-// Install remark and remark-html
 import { remark } from 'remark'
 import html from 'remark-html'
-import { getPostBySlug, getAllPosts } from '../lib/posts'
+import { getPostBySlug, getAllPosts } from '../../lib/posts'
 
-import SEO from '../components/SEO'
+import SEO from '../../components/SEO'
 
-import { Container, Card, Row, Text } from '@nextui-org/react'
+import { Container, Card, Text } from '@nextui-org/react'
 
 export async function getStaticProps({ params }) {
-  console.warn('GET POST')
   const post = getPostBySlug(params.slug)
   const markdown = await remark()
     .use(html)
@@ -41,7 +37,6 @@ export async function getStaticPaths() {
 }
 
 const Post = (post) => {
-  console.warn('POST', post)
   return (
     <Container>
       <SEO
@@ -59,8 +54,6 @@ const Post = (post) => {
           dangerouslySetInnerHTML={{ __html: post.content }}
           itemProp="articleBody"
         />
-        <hr />
-        <footer>{/* <Bio /> */}</footer>
       </article>
     </Container>
   )
