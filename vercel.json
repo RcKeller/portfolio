@@ -1,0 +1,34 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "andy.barrfitz.com"
+        }
+      ],
+      "destination": "/andy"
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "andy.barrfitz.com"
+        }
+      ],
+      "destination": "/andy/:path*"
+    },
+    {
+      "source": "/api/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "api.barrfitz.com"
+        }
+      ],
+      "destination": "/api/:path*"
+    }
+  ]
+}
