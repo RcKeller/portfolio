@@ -1,8 +1,8 @@
 import { remark } from 'remark'
 import html from 'remark-html'
-import { getPostBySlug, getAllPosts } from '../../lib/posts'
+import { getPostBySlug, getAllPosts } from '../lib/posts'
 
-import SEO from '../../components/SEO'
+import SEO from '../components/SEO'
 
 import { Container, Card, Text } from '@nextui-org/react'
 

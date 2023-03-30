@@ -1,3 +1,4 @@
+import * as React from 'react'
 import 'prismjs/themes/prism-okaidia.css'
 import '../styles/globals.css'
 // import "../styles/index.scss";
@@ -5,72 +6,52 @@ import '../styles/globals.css'
 
 import type { AppProps } from 'next/app'
 // 1. Import `createTheme`
-import { createTheme, NextUIProvider } from '@nextui-org/react'
-import {
-  ThemeProvider as NextThemesProvider,
-  useTheme as useNextTheme,
-} from 'next-themes'
-import { Navbar, Button, Link, Text, Switch, useTheme } from '@nextui-org/react'
+import { NextUIProvider } from '@nextui-org/react'
+import { ThemeProvider as NextThemesProvider } from 'next-themes'
 
 import Layout from '../components/Layout/'
 
-// 2. Call `createTheme` and pass your custom values
-const lightTheme = createTheme({
-  type: 'light',
-  theme: {
-    colors: {
-      primary: '#A020F0',
-    },
-    // colors: {...}, // optional
-  },
-})
+import Head from 'next/head'
+import { ThemeProvider } from '@mui/material/styles'
+import CssBaseline from '@mui/material/CssBaseline'
+import { CacheProvider, EmotionCache } from '@emotion/react'
 
-const darkTheme = createTheme({
-  type: 'dark',
-  theme: {
-    colors: {
-      // primary: '#A020F0'
-      // brand colors
-      primaryLight: '$purple200',
-      primaryLightHover: '$purple300',
-      primaryLightActive: '$purple400',
-      primaryLightContrast: '$purple600',
-      primary: '$purple700', //
-      primaryBorder: '$purple500',
-      primaryBorderHover: '$purple600',
-      primarySolidHover: '$purple700',
-      primarySolidContrast: '$white',
-      primaryShadow: '$purple500',
+import { theme, lightTheme, darkTheme } from '../styles/theme'
+import createEmotionCache from '../lib/createEmotionCache'
 
-      gradient:
-        'linear-gradient(112deg, $blue100 -25%, $pink500 -10%, $purple500 80%)',
-      link: '#5E1DAD',
-    },
-    // colors: {...}, // optional
-  },
-})
+// Client-side cache, shared for the whole session of the user in the browser.
+const clientSideEmotionCache = createEmotionCache()
 
-// 3. Wrap NextUIProvider with NextThemesProvider
-// _app.jsx // _app.tsx
+export interface MyAppProps extends AppProps {
+  emotionCache?: EmotionCache
+}
 
-export default function App({ Component, pageProps }: AppProps) {
-  const { setTheme } = useNextTheme()
-  const { isDark, type } = useTheme()
+export default function App(props: MyAppProps) {
+  const { Component, emotionCache = clientSideEmotionCache, pageProps } = props
 
   return (
-    <NextThemesProvider
-      defaultTheme="system"
-      attribute="class"
-      value={{
-        light: lightTheme.className,
-        dark: darkTheme.className,
-      }}
-    >
-      <NextUIProvider>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </NextUIProvider>
-    </NextThemesProvider>
+    <CacheProvider value={emotionCache}>
+      <Head>
+        <meta name="viewport" content="initial-scale=1, width=device-width" />
+      </Head>
+      <ThemeProvider theme={theme}>
+        <NextThemesProvider
+          defaultTheme="system"
+          attribute="class"
+          value={{
+            light: lightTheme.className,
+            dark: darkTheme.className,
+          }}
+        >
+          <NextUIProvider>
+            <Layout>
+              {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+              <CssBaseline />
+              <Component {...pageProps} />
+            </Layout>
+          </NextUIProvider>
+        </NextThemesProvider>
+      </ThemeProvider>
+    </CacheProvider>
   )
 }
