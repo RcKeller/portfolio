@@ -2,16 +2,16 @@ import injectSheet from "react-jss";
 import PropTypes from "prop-types";
 import React from "react";
 
-//import { MenuItem, MenuList } from "@material-ui/core/Menu";
+//import { MenuItem, MenuList } from "@mui/material/Menu";
 import { Manager, Target, Popper } from "react-popper";
-import ClickAwayListener from "@material-ui/core/ClickAwayListener";
-import Grow from "@material-ui/core/Grow";
-import Paper from "@material-ui/core/Paper";
+import ClickAwayListener from "@mui/material/ClickAwayListener";
+import Grow from "@mui/material/Grow";
+import Paper from "@mui/material/Paper";
 import classNames from "classnames";
-import MenuItem from "@material-ui/core/MenuItem";
-import MenuList from "@material-ui/core/MenuList";
-import IconButton from "@material-ui/core/IconButton";
-import FormatSizeIcon from "@material-ui/icons/FormatSize";
+import MenuItem from "@mui/material/MenuItem";
+import MenuList from "@mui/material/MenuList";
+import IconButton from "@mui/material/IconButton";
+import FormatSizeIcon from "@mui/icons-material/FormatSize";
 
 const styles = theme => ({
   fontSizeSetter: {
@@ -71,7 +71,7 @@ class FontSetter extends React.Component {
               onClick={this.handleClick}
               title="Change font size"
               className={classes.open}
-            >
+              size="large">
               <FormatSizeIcon />
             </IconButton>
           </Target>

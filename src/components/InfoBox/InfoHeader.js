@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 import injectSheet from "react-jss";
 import Link from "gatsby-link";
 import Typist from 'react-typist'
-import IconButton from "@material-ui/core/IconButton";
+import IconButton from "@mui/material/IconButton";
 
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 // import avatar from "../../images/jpg/avatar.jpg";
 import avatar from "../../images/png/avatar.png";

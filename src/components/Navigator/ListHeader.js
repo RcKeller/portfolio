@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import injectSheet from "react-jss";
-import IconButton from "@material-ui/core/IconButton";
+import IconButton from "@mui/material/IconButton";
 
-import CloseIcon from "@material-ui/icons/Close";
-import ExpandLessIcon from "@material-ui/icons/ExpandLess";
+import CloseIcon from "@mui/icons-material/Close";
+import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 
 const styles = theme => ({
   closed: {
@@ -90,7 +90,7 @@ const ListHeader = props => {
             className={classes.expand}
             onClick={expandOnClick}
             title="Expand the list"
-          >
+            size="large">
             <ExpandLessIcon />
           </IconButton>
         </div>
@@ -104,7 +104,7 @@ const ListHeader = props => {
               className={classes.clear}
               onClick={removeFilter}
               title="Clear filtering"
-            >
+              size="large">
               <CloseIcon />
             </IconButton>
           </div>

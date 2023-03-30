@@ -1,7 +1,7 @@
 import React from "react";
 import injectSheet from "react-jss";
 import PropTypes from "prop-types";
-import Avatar from "@material-ui/core/Avatar";
+import Avatar from "@mui/material/Avatar";
 import Link from "gatsby-link";
 import { connect } from "react-redux";
 

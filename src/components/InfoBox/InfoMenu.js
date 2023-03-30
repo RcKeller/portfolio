@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import injectSheet from "react-jss";
 import Link from "gatsby-link";
 
-import Button from '@material-ui/core/Button';
+import Button from '@mui/material/Button';
 
 const styles = theme => ({
   infoMenu: {

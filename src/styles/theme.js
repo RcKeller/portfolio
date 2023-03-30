@@ -1,8 +1,8 @@
-import { createMuiTheme } from "@material-ui/core/styles";
+import { createTheme, adaptV4Theme } from "@mui/material/styles";
 import Color from "color";
 import colors from "./colors";
 
-const theme = createMuiTheme({
+const theme = createTheme(adaptV4Theme({
   base: {
     colors: {
       background: colors.background,
@@ -146,7 +146,7 @@ const theme = createMuiTheme({
     L: 1024
   },
   palette: {
-    type: 'dark',
+    mode: 'dark',
     background: {
       paper: colors.foreground
     },
@@ -164,6 +164,6 @@ const theme = createMuiTheme({
     fontFamily: `'Roboto Mono', monospace`,
     fontSize: 16
   }
-});
+}));
 
 export default theme;

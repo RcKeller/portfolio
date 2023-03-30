@@ -1,16 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 import injectSheet from "react-jss";
-import IconButton from "@material-ui/core/IconButton";
+import IconButton from "@mui/material/IconButton";
 
 import Link from "gatsby-link";
 import { connect } from "react-redux";
 import screenfull from "screenfull";
 
-import HomeIcon from "@material-ui/icons/Home";
-import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
-import FullscreenIcon from "@material-ui/icons/Fullscreen";
-import FullscreenExitIcon from "@material-ui/icons/FullscreenExit";
+import HomeIcon from "@mui/icons-material/Home";
+import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
+import FullscreenIcon from "@mui/icons-material/Fullscreen";
+import FullscreenExitIcon from "@mui/icons-material/FullscreenExit";
 
 import {
   setNavigatorPosition,
@@ -131,7 +131,7 @@ class ActionsBar extends React.Component {
             onClick={this.homeOnClick}
             title="Back to the list"
             className={classes.button}
-          >
+            size="large">
             <HomeIcon />
           </IconButton>
           {((isWideScreen && navigatorShape === "open") || navigatorPosition !== "is-aside") && (
@@ -157,11 +157,15 @@ class ActionsBar extends React.Component {
               onClick={this.fullscreenOnClick}
               title="Fullscreen mode"
               className={classes.button}
-            >
+              size="large">
               {this.state.fullscreen ? <FullscreenExitIcon /> : <FullscreenIcon />}
             </IconButton>
           )}
-          <IconButton aria-label="Back to top" onClick={this.arrowUpOnClick} title="Scroll to top">
+          <IconButton
+            aria-label="Back to top"
+            onClick={this.arrowUpOnClick}
+            title="Scroll to top"
+            size="large">
             <ArrowUpwardIcon className={classes.button} />
           </IconButton>
         </div>

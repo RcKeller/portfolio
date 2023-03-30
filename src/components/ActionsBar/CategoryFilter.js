@@ -1,15 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
 import injectSheet from "react-jss";
-import MenuItem from "@material-ui/core/MenuItem";
-import MenuList from "@material-ui/core/MenuList";
-import IconButton from "@material-ui/core/IconButton";
+import MenuItem from "@mui/material/MenuItem";
+import MenuList from "@mui/material/MenuList";
+import IconButton from "@mui/material/IconButton";
 import { Manager, Target, Popper } from "react-popper";
-import ClickAwayListener from "@material-ui/core/ClickAwayListener";
-import Grow from "@material-ui/core/Grow";
-import Paper from "@material-ui/core/Paper";
+import ClickAwayListener from "@mui/material/ClickAwayListener";
+import Grow from "@mui/material/Grow";
+import Paper from "@mui/material/Paper";
 import classNames from "classnames";
-import FilterListIcon from "@material-ui/icons/FilterList";
+import FilterListIcon from "@mui/icons-material/FilterList";
 
 const styles = theme => ({
   fontSizeSetter: {
@@ -69,7 +69,7 @@ class CategoryFilter extends React.Component {
               onClick={this.handleClick}
               title="Filter the list by category"
               className={classes.open}
-            >
+              size="large">
               <FilterListIcon />
             </IconButton>
           </Target>

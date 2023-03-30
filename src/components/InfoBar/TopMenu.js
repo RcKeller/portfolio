@@ -1,10 +1,10 @@
-import ClickAwayListener from '@material-ui/core/ClickAwayListener';
-import Grow from '@material-ui/core/Grow';
-import IconButton from '@material-ui/core/IconButton';
-import MenuItem from '@material-ui/core/MenuItem';
-import MenuList from '@material-ui/core/MenuList';
-import Paper from '@material-ui/core/Paper';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
+import ClickAwayListener from '@mui/material/ClickAwayListener';
+import Grow from '@mui/material/Grow';
+import IconButton from '@mui/material/IconButton';
+import MenuItem from '@mui/material/MenuItem';
+import MenuList from '@mui/material/MenuList';
+import Paper from '@mui/material/Paper';
+import MoreVertIcon from '@mui/icons-material/MoreVert';
 import classNames from 'classnames';
 import Link from 'gatsby-link';
 import PropTypes from 'prop-types';
@@ -65,7 +65,7 @@ class TopMenu extends React.Component {
               aria-haspopup="true"
               onClick={this.handleClick}
               className={classes.open}
-            >
+              size="large">
               <MoreVertIcon />
             </IconButton>
           </Target>

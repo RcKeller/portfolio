@@ -1,6 +1,6 @@
 import React from "react";
 import injectSheet from "react-jss";
-import { MuiThemeProvider } from "@material-ui/core/styles";
+import { ThemeProvider, StyledEngineProvider } from "@mui/material/styles";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 
