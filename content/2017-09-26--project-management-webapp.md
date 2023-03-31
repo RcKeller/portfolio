@@ -3,17 +3,17 @@ title: IT Project Management Webapp
 subtitle: Used to allocate $12 million annually across over 100 projects
 category: Portfolio
 cover: project-management-webapp.png
-series: "STF Web App"
+series: 'STF Web App'
 next: Business Process Redesign
 nexturl: /stf-process-redesign
 # demo: https://uwstf.org
 source: https://github.com/RcKeller/STF-Refresh
 tags:
-    - Web
-    - React
-    - NodeJS
-    - Development
-    - Professionalism
+  - Web
+  - React
+  - NodeJS
+  - Development
+  - Professionalism
 ---
 
 The UW Student Technology Fee Committee is an entirely-student run organization that allocates roughly ~~$5~~ $12 million dollars across over a hundred student technology projects annually. Formed by the Washington State Legislature and UW Board of Regents, the STFC is a prime force for driving innovation via the student experience. Per the Open Public Meetings Act, the STFC maintains a high degree of transparency in both operations and engineering practices, and has open sourced their web platform.
