@@ -8,7 +8,7 @@ const Header = (props: IHeader) => (
   <header id="header" className="alt">
     <Link href="/" legacyBehavior>
       <a className="logo">
-        <strong>Forty</strong> <span>by HTML5 UP</span>
+        <strong>Andy Keller</strong> <span>- Software Engineer</span>
       </a>
     </Link>
     <nav>

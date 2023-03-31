@@ -17,37 +17,20 @@ const Menu = (props: IMenu) => (
           </Link>
         </li>
         <li>
-          <Link legacyBehavior href="/landing">
-            <a>
-              <span onClick={props.onToggleMenu}>Landing</span>
-            </a>
-          </Link>
+          <a href="https://www.linkedin.com/in/jbarrowsfitzgerald/">LinkedIn</a>
         </li>
         <li>
-          <Link legacyBehavior href="/generic">
-            <a>
-              <span onClick={props.onToggleMenu}>Generic</span>
-            </a>
-          </Link>
+          <a href="https://github.com/jbarrfitz">GitHub</a>
         </li>
         <li>
-          <Link legacyBehavior href="/elements">
-            <a>
-              <span onClick={props.onToggleMenu}>Elements</span>
-            </a>
-          </Link>
-        </li>
-      </ul>
-      <ul className="actions vertical">
-        <li>
-          <a href="#" className="button special fit">
-            Get Started
+          <a target="_blank" href="/resume.pdf">
+            Resume
           </a>
         </li>
         <li>
-          <a href="#" className="button fit">
-            Log In
-          </a>
+          <Link legacyBehavior href="/testimonials">
+            <span onClick={props.onToggleMenu}>Testimonials</span>
+          </Link>
         </li>
       </ul>
     </div>

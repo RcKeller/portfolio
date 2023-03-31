@@ -44,7 +44,6 @@ export default function Index({ posts }: IIndexProps) {
               // })
               .map((post) => {
                 const title = post.frontmatter.title || post.slug
-                console.warn('POST', post.frontmatter)
                 return (
                   <article
                     key={post.slug}
@@ -65,7 +64,7 @@ export default function Index({ posts }: IIndexProps) {
                 )
               })}
           </section>
-          <section id="two">
+          {/* <section id="two">
             <div className="inner">
               <header className="major">
                 <h2>Massa libero</h2>
@@ -87,7 +86,7 @@ export default function Index({ posts }: IIndexProps) {
                 </li>
               </ul>
             </div>
-          </section>
+          </section> */}
         </div>
       </div>
     </>
