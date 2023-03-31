@@ -57,11 +57,14 @@ export function getPostBySlug(slug: string) {
   const rawDate = matchedFile?.includes('--')
     ? matchedFile.split('--')[0]
     : data.date
-  const date = format(parseISO(rawDate), 'yyyy-mm-dd')
+  // const date = format(parseISO(rawDate), 'yyyy-mm-dd')
+  // const date = format(parseISO(data.date), 'MMMM dd, yyyy')
+
+  // console.warn('DEBUG', { slug, fullPath, rawDate, date })
 
   const post: IPost = {
     slug: realSlug,
-    frontmatter: { ...data, title: data.title || '', date },
+    frontmatter: { ...data, title: data.title || '', date: rawDate },
     content,
   }
   return post

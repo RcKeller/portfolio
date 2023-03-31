@@ -16,13 +16,6 @@ const Banner = () => (
           moved to Seattle to gain industry experience and an advanced
           education, taking some time in-between to travel across the states.
         </p>
-        {/* <p>
-          What keeps me going is the drive to not just consume knowledge, but
-          create it. As developers we are always on the forefront of the
-          industry, creating new systems and experiences that drive social
-          progress, and it&apos;s an exciting field to be in. Our work is a
-          labor of love and I want to share that with everyone possible.
-        </p> */}
         <ul className="actions">
           <p>
             If you&apos;d like to learn more, please check out my open source
@@ -31,6 +24,7 @@ const Banner = () => (
           <li>
             <a
               href="https://www.linkedin.com/in/andy-keller-bf/"
+              target="_blank"
               className="button scrolly icon fa-linkedin"
             >
               LinkedIn
@@ -39,6 +33,7 @@ const Banner = () => (
           <li>
             <a
               href="https://github.com/rckeller"
+              target="_blank"
               className="button scrolly icon fa-github"
             >
               GitHub

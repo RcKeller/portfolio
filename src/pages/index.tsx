@@ -35,13 +35,17 @@ export default function Index({ posts }: IIndexProps) {
         <div id="main">
           <section id="one" className="tiles">
             {posts
-              .filter((p) => !!p.frontmatter.cover)
-              // .sort((a, b) => {
-              //   return (
-              //     new Date(b.frontmatter?.date).getTime() -
-              //     new Date(a.frontmatter?.date).getTime()
-              //   )
-              // })
+              .filter(
+                (p) =>
+                  p.frontmatter.category === 'Portfolio' &&
+                  !!p.frontmatter.cover
+              )
+              .sort((a, b) => {
+                return (
+                  new Date(b.frontmatter?.date || '').getTime() -
+                  new Date(a.frontmatter?.date || '').getTime()
+                )
+              })
               .map((post) => {
                 const title = post.frontmatter.title || post.slug
                 return (
@@ -50,7 +54,7 @@ export default function Index({ posts }: IIndexProps) {
                     itemScope
                     itemType="http://schema.org/Article"
                     style={{
-                      backgroundImage: `url(/${post.frontmatter.cover});`,
+                      backgroundImage: `url(/${post.frontmatter.cover})`,
                     }}
                   >
                     <header className="major">

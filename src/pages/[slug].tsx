@@ -37,32 +37,50 @@ export async function getStaticPaths() {
 }
 
 const Post = (post: IPost) => {
+  const { content, excerpt } = post
+  const { title, description, date, cover, source, demo } = post.frontmatter
+
   return (
     <>
-      <SEO
-        title={post.frontmatter.title}
-        description={post.frontmatter.description || post?.excerpt || ''}
-      />
+      <SEO title={title} description={description || excerpt || ''} />
 
       <div id="main" className="alt">
         <section id="one">
           <div className="inner">
             <header className="major">
-              <h1>{post.frontmatter.title}</h1>
-              <h6>{post.frontmatter.date}</h6>
+              <h1>{title}</h1>
+              <h4>{`Published ${date}`}</h4>
+              <ul className="actions">
+                {demo && (
+                  <li>
+                    <a
+                      href={demo}
+                      target="_blank"
+                      className="button scrolly icon fa-arrow-right"
+                    >
+                      Demo
+                    </a>
+                  </li>
+                )}
+                {source && (
+                  <li>
+                    <a
+                      href={source}
+                      target="_blank"
+                      className="button scrolly icon fa-github"
+                    >
+                      Source
+                    </a>
+                  </li>
+                )}
+              </ul>
             </header>
-            {post.frontmatter.cover && (
+            {cover && (
               // <span className="image main">
-              <Image
-                src={`/${post.frontmatter.cover}`}
-                alt={post.frontmatter.title}
-                width={854}
-                height={480}
-              />
-              // </span>
+              <Image src={`/${cover}`} alt={title} width={854} height={480} />
             )}
             <section
-              dangerouslySetInnerHTML={{ __html: post.content }}
+              dangerouslySetInnerHTML={{ __html: content }}
               itemProp="articleBody"
             />
           </div>
