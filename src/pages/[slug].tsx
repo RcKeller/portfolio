@@ -4,6 +4,7 @@ import { getPostBySlug, getAllPosts, IPost } from '../lib/posts'
 
 import SEO from '../components/SEO'
 import { GetStaticPropsContext } from 'next'
+import Image from 'next/image'
 
 export async function getStaticProps({ params }: GetStaticPropsContext) {
   const post = getPostBySlug((params?.slug as string) || '')
@@ -50,9 +51,16 @@ const Post = (post: IPost) => {
               <h1>{post.frontmatter.title}</h1>
               <h6>{post.frontmatter.date}</h6>
             </header>
-            <span className="image main">
-              <img src="/static/images/pic11.jpg" alt="" />
-            </span>
+            {post.frontmatter.cover && (
+              // <span className="image main">
+              <Image
+                src={`/${post.frontmatter.cover}`}
+                alt={post.frontmatter.title}
+                width={854}
+                height={480}
+              />
+              // </span>
+            )}
             <section
               dangerouslySetInnerHTML={{ __html: post.content }}
               itemProp="articleBody"

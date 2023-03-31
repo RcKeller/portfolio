@@ -2,43 +2,33 @@
 // src/config.js
 
 const config = {
-  title: 'Starter Blog',
-  author: {
-    name: 'Lee Robinson',
-    summary: 'who loves Next.js.',
-  },
-  description: 'A starter blog converting Gatsby -> Next.',
-  social: {
-    twitter: 'leeerob',
-  },
-  //
-  siteTitle: 'Ryan Keller - Software Engineer', // <title>
+  siteTitle: 'Andy Keller - Software Engineer', // <title>
   shortSiteTitle: '<Keller />', // <title> ending for posts and pages
-  siteDescription: 'Portfolio for Ryan Keller, Software Engineer.',
-  siteUrl: 'https://rykeller.com',
+  siteDescription: 'Portfolio for Andy Keller, Sr. Software Engineer.',
+  siteUrl: 'https://andy@barrfitz.com',
   pathPrefix: '',
   siteImage: 'preview.jpg',
   siteLanguage: 'en',
   // author
-  authorName: 'Keller, Ryan',
+  authorName: 'Andy Keller',
   authorTwitterAccount: '',
   // info
-  infoTitle: 'Keller, Ryan',
+  infoTitle: 'Andy Keller',
   infoTitleNote: 'Software Engineer',
   // manifest.json
-  manifestName: 'Ryan Keller - Software Engineer',
-  manifestShortName: 'Ryan Keller', // max 12 characters
+  manifestName: 'Andy Keller - Software Engineer',
+  manifestShortName: 'Andy Keller', // max 12 characters
   manifestStartUrl: '/',
   //   manifestBackgroundColor: colors.background,
   //   manifestThemeColor: colors.background,
   manifestDisplay: 'standalone',
   // contact
-  contactEmail: 'john@doe.com',
+  contactEmail: 'andy@barrfitz.com',
   // social
   authorSocialLinks: [
     { name: 'GitHub', url: 'https://github.com/RcKeller' },
-    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/ryanckeller' },
-    { name: 'Resume', url: 'https://rykeller.com/resume.pdf' },
+    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/andy-keller-bf' },
+    { name: 'Resume', url: 'https://barrfitz.com/resume.pdf' },
   ],
 }
 export default config

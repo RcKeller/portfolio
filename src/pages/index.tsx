@@ -34,84 +34,36 @@ export default function Index({ posts }: IIndexProps) {
 
         <div id="main">
           <section id="one" className="tiles">
-            <article
-              style={{
-                backgroundImage: `url('/static/images/pic01.jpg')`,
-              }}
-            >
-              <header className="major">
-                <h3>Aliquam</h3>
-                <p>Ipsum dolor sit amet</p>
-              </header>
-              <Link legacyBehavior href="/landing">
-                <a className="link primary"></a>
-              </Link>
-            </article>
-            <article
-              style={{
-                backgroundImage: `url('/static/images/pic02.jpg')`,
-              }}
-            >
-              <header className="major">
-                <h3>Tempus</h3>
-                <p>feugiat amet tempus</p>
-              </header>
-              <Link legacyBehavior href="/landing">
-                <a className="link primary"></a>
-              </Link>
-            </article>
-            <article
-              style={{
-                backgroundImage: `url('/static/images/pic03.jpg')`,
-              }}
-            >
-              <header className="major">
-                <h3>Magna</h3>
-                <p>Lorem etiam nullam</p>
-              </header>
-              <Link legacyBehavior href="/landing">
-                <a className="link primary"></a>
-              </Link>
-            </article>
-            <article
-              style={{
-                backgroundImage: `url('/static/images/pic04.jpg')`,
-              }}
-            >
-              <header className="major">
-                <h3>Ipsum</h3>
-                <p>Nisl sed aliquam</p>
-              </header>
-              <Link legacyBehavior href="/landing">
-                <a className="link primary"></a>
-              </Link>
-            </article>
-            <article
-              style={{
-                backgroundImage: `url('/static/images/pic05.jpg')`,
-              }}
-            >
-              <header className="major">
-                <h3>Consequat</h3>
-                <p>Ipsum dolor sit amet</p>
-              </header>
-              <Link legacyBehavior href="/landing">
-                <a className="link primary"></a>
-              </Link>
-            </article>
-            <article
-              style={{
-                backgroundImage: `url('/static/images/pic06.jpg')`,
-              }}
-            >
-              <header className="major">
-                <h3>Etiam</h3>
-                <p>Feugiat amet tempus</p>
-              </header>
-              <Link legacyBehavior href="/landing">
-                <a className="link primary"></a>
-              </Link>
-            </article>
+            {posts
+              .filter((p) => !!p.frontmatter.cover)
+              // .sort((a, b) => {
+              //   return (
+              //     new Date(b.frontmatter?.date).getTime() -
+              //     new Date(a.frontmatter?.date).getTime()
+              //   )
+              // })
+              .map((post) => {
+                const title = post.frontmatter.title || post.slug
+                console.warn('POST', post.frontmatter)
+                return (
+                  <article
+                    key={post.slug}
+                    itemScope
+                    itemType="http://schema.org/Article"
+                    style={{
+                      backgroundImage: `url(/${post.frontmatter.cover});`,
+                    }}
+                  >
+                    <header className="major">
+                      <h3>{title}</h3>
+                      <p>{post.frontmatter?.subtitle}</p>
+                    </header>
+                    <Link legacyBehavior href={`/${post.slug}`}>
+                      <a className="link primary"></a>
+                    </Link>
+                  </article>
+                )
+              })}
           </section>
           <section id="two">
             <div className="inner">
