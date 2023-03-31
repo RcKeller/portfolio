@@ -3,7 +3,12 @@
 import Head from 'next/head'
 import config from '../lib/config'
 
-export default function SEO({ description, title }) {
+export interface ISEO {
+  title: string
+  description: string
+}
+
+export default function SEO({ description, title }: ISEO) {
   const siteTitle = config.title
 
   return (

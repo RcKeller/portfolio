@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import { AppProps } from 'next/app'
-import '../styles/main.scss'
 import useTimeout from '../hooks/useTimeout'
 
 import Header from '../components/Header'
 import Menu from '../components/Menu'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
+
+import '../styles/main.scss'
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   // export default function MyApp({ Component, pageProps }: AppProps) {

@@ -2,9 +2,13 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { getAllPosts } from '../lib/posts'
+import { getAllPosts, IPost } from '../lib/posts'
 
 import Banner from '../components/Banner'
+
+export interface IIndexProps {
+  posts: IPost[]
+}
 
 export async function getStaticProps() {
   const posts = getAllPosts()
@@ -16,7 +20,7 @@ export async function getStaticProps() {
   }
 }
 
-export default function Index({ posts }) {
+export default function Index({ posts }: IIndexProps) {
   if (posts.length === 0) {
     return (
       <p>No blog posts found. Add markdown posts to &nbsp;content&nbsp;.</p>

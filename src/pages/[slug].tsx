@@ -1,11 +1,12 @@
 import { remark } from 'remark'
 import html from 'remark-html'
-import { getPostBySlug, getAllPosts } from '../lib/posts'
+import { getPostBySlug, getAllPosts, IPost } from '../lib/posts'
 
 import SEO from '../components/SEO'
+import { GetStaticPropsContext } from 'next'
 
-export async function getStaticProps({ params }) {
-  const post = getPostBySlug(params.slug)
+export async function getStaticProps({ params }: GetStaticPropsContext) {
+  const post = getPostBySlug((params?.slug as string) || '')
   const markdown = await remark()
     .use(html)
     .process(post.content || '')
@@ -23,7 +24,7 @@ export async function getStaticPaths() {
   const posts = getAllPosts()
 
   return {
-    paths: posts.map((post: any) => {
+    paths: posts.map((post: IPost) => {
       return {
         params: {
           slug: post.slug,
@@ -34,12 +35,12 @@ export async function getStaticPaths() {
   }
 }
 
-const Post = (post) => {
+const Post = (post: IPost) => {
   return (
     <>
       <SEO
         title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt}
+        description={post.frontmatter.description || post?.excerpt || ''}
       />
 
       <div id="main" className="alt">

@@ -1,8 +1,10 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import Link from 'next/link'
 
-const Header = (props) => (
+export interface IHeader {
+  onToggleMenu: () => void
+}
+const Header = (props: IHeader) => (
   <header id="header" className="alt">
     <Link href="/" legacyBehavior>
       <a className="logo">
@@ -16,9 +18,5 @@ const Header = (props) => (
     </nav>
   </header>
 )
-
-Header.propTypes = {
-  onToggleMenu: PropTypes.func,
-}
 
 export default Header

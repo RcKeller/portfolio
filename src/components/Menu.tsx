@@ -1,8 +1,11 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import Link from 'next/link'
 
-const Menu = (props) => (
+export interface IMenu {
+  onToggleMenu: () => void
+}
+
+const Menu = (props: IMenu) => (
   <nav id="menu">
     <div className="inner">
       <ul className="links">
@@ -53,9 +56,5 @@ const Menu = (props) => (
     </a>
   </nav>
 )
-
-Menu.propTypes = {
-  onToggleMenu: PropTypes.func,
-}
 
 export default Menu
