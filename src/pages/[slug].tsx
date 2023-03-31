@@ -2,7 +2,7 @@ import { remark } from 'remark'
 import html from 'remark-html'
 import { getPostBySlug, getAllPosts } from '../lib/posts'
 
-import SEO from '../components'
+import SEO from '../components/SEO'
 
 export async function getStaticProps({ params }) {
   const post = getPostBySlug(params.slug)

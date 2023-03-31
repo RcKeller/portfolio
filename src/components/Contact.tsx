@@ -1,5 +1,5 @@
 import React from 'react'
-const Contact = (props) => (
+const Contact = () => (
   <section id="contact">
     <div className="inner">
       <section>

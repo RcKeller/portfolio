@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 import { getAllPosts } from '../lib/posts'
 
-import BannerLanding from '../components/BannerLanding'
+import Banner from '../components/Banner'
 
 export async function getStaticProps() {
   const posts = getAllPosts()
@@ -25,116 +25,112 @@ export default function Index({ posts }) {
 
   return (
     <>
-      <Head>
-        <title>Landing Page</title>
-        <meta name="description" content="Landing Page" />
-      </Head>
-
       <div>
-        <BannerLanding />
+        <Banner />
 
         <div id="main">
-          <section id="one">
+          <section id="one" className="tiles">
+            <article
+              style={{
+                backgroundImage: `url('/static/images/pic01.jpg')`,
+              }}
+            >
+              <header className="major">
+                <h3>Aliquam</h3>
+                <p>Ipsum dolor sit amet</p>
+              </header>
+              <Link legacyBehavior href="/landing">
+                <a className="link primary"></a>
+              </Link>
+            </article>
+            <article
+              style={{
+                backgroundImage: `url('/static/images/pic02.jpg')`,
+              }}
+            >
+              <header className="major">
+                <h3>Tempus</h3>
+                <p>feugiat amet tempus</p>
+              </header>
+              <Link legacyBehavior href="/landing">
+                <a className="link primary"></a>
+              </Link>
+            </article>
+            <article
+              style={{
+                backgroundImage: `url('/static/images/pic03.jpg')`,
+              }}
+            >
+              <header className="major">
+                <h3>Magna</h3>
+                <p>Lorem etiam nullam</p>
+              </header>
+              <Link legacyBehavior href="/landing">
+                <a className="link primary"></a>
+              </Link>
+            </article>
+            <article
+              style={{
+                backgroundImage: `url('/static/images/pic04.jpg')`,
+              }}
+            >
+              <header className="major">
+                <h3>Ipsum</h3>
+                <p>Nisl sed aliquam</p>
+              </header>
+              <Link legacyBehavior href="/landing">
+                <a className="link primary"></a>
+              </Link>
+            </article>
+            <article
+              style={{
+                backgroundImage: `url('/static/images/pic05.jpg')`,
+              }}
+            >
+              <header className="major">
+                <h3>Consequat</h3>
+                <p>Ipsum dolor sit amet</p>
+              </header>
+              <Link legacyBehavior href="/landing">
+                <a className="link primary"></a>
+              </Link>
+            </article>
+            <article
+              style={{
+                backgroundImage: `url('/static/images/pic06.jpg')`,
+              }}
+            >
+              <header className="major">
+                <h3>Etiam</h3>
+                <p>Feugiat amet tempus</p>
+              </header>
+              <Link legacyBehavior href="/landing">
+                <a className="link primary"></a>
+              </Link>
+            </article>
+          </section>
+          <section id="two">
             <div className="inner">
               <header className="major">
-                <h2>Sed amet aliquam</h2>
+                <h2>Massa libero</h2>
               </header>
               <p>
                 Nullam et orci eu lorem consequat tincidunt vivamus et sagittis
-                magna sed nunc rhoncus condimentum sem. In efficitur ligula tate
-                urna. Maecenas massa vel lacinia pellentesque lorem ipsum dolor.
-                Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis
-                libero. Nullam et orci eu lorem consequat tincidunt vivamus et
-                sagittis magna sed nunc rhoncus condimentum sem. In efficitur
-                ligula tate urna.
+                libero. Mauris aliquet magna magna sed nunc rhoncus pharetra.
+                Pellentesque condimentum sem. In efficitur ligula tate urna.
+                Maecenas laoreet massa vel lacinia pellentesque lorem ipsum
+                dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et
+                sagittis libero. Mauris aliquet magna magna sed nunc rhoncus
+                amet pharetra et feugiat tempus.
               </p>
+              <ul className="actions">
+                <li>
+                  <Link legacyBehavior href="/landing">
+                    <a className="button next">Get Started</a>
+                  </Link>
+                </li>
+              </ul>
             </div>
-          </section>
-          <section id="two" className="spotlights">
-            <section>
-              <Link legacyBehavior href="/generic">
-                <a className="image">
-                  <img src="/static/images/pic08.jpg" alt="" />
-                </a>
-              </Link>
-              <div className="content">
-                <div className="inner">
-                  <header className="major">
-                    <h3>Orci maecenas</h3>
-                  </header>
-                  <p>
-                    Nullam et orci eu lorem consequat tincidunt vivamus et
-                    sagittis magna sed nunc rhoncus condimentum sem. In
-                    efficitur ligula tate urna. Maecenas massa sed magna lacinia
-                    magna pellentesque lorem ipsum dolor. Nullam et orci eu
-                    lorem consequat tincidunt. Vivamus et sagittis tempus.
-                  </p>
-                  <ul className="actions">
-                    <li>
-                      <Link legacyBehavior href="/generic">
-                        <a className="button">Learn more</a>
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </section>
-            <section>
-              <Link legacyBehavior href="/generic">
-                <a className="image">
-                  <img src="/static/images/pic09.jpg" alt="" />
-                </a>
-              </Link>
-              <div className="content">
-                <div className="inner">
-                  <header className="major">
-                    <h3>Rhoncus magna</h3>
-                  </header>
-                  <p>
-                    Nullam et orci eu lorem consequat tincidunt vivamus et
-                    sagittis magna sed nunc rhoncus condimentum sem. In
-                    efficitur ligula tate urna. Maecenas massa sed magna lacinia
-                    magna pellentesque lorem ipsum dolor. Nullam et orci eu
-                    lorem consequat tincidunt. Vivamus et sagittis tempus.
-                  </p>
-                  <ul className="actions">
-                    <li>
-                      <Link legacyBehavior href="/generic">
-                        <a className="button">Learn more</a>
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </section>
-            <section>
-              <Link legacyBehavior href="/generic">
-                <a className="image">
-                  <img src="/static/images/pic10.jpg" alt="" />
-                </a>
-              </Link>
-              <div className="content">
-                <div className="inner">
-                  <header className="major">
-                    <h3>Sed nunc ligula</h3>
-                  </header>
-                  <p>
-                    Nullam et orci eu lorem consequat tincidunt vivamus et
-                    sagittis magna sed nunc rhoncus condimentum sem. In
-                    efficitur ligula tate urna. Maecenas massa sed magna lacinia
-                    magna pellentesque lorem ipsum dolor. Nullam et orci eu
-                    lorem consequat tincidunt. Vivamus et sagittis tempus.
-                  </p>
-                  <ul className="actions">
-                    <li>
-                      <Link legacyBehavior href="/generic">
-                        <a className="button">Learn more</a>
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </section>
           </section>
         </div>
       </div>
