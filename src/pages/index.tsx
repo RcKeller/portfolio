@@ -33,6 +33,13 @@ export default function Index({ posts }: IIndexProps) {
         <Banner />
 
         <div id="main">
+          <section id="two">
+            <div className="inner">
+              <header className="major">
+                <h2>Latest Projects</h2>
+              </header>
+            </div>
+          </section>
           <section id="one" className="tiles">
             {posts
               .filter(
@@ -96,34 +103,3 @@ export default function Index({ posts }: IIndexProps) {
     </>
   )
 }
-
-/**
-{posts.map((post) => {
-  const title = post.frontmatter.title || post.slug
-  return (
-    <article
-      key={post.slug}
-      className="post-list-item"
-      itemScope
-      itemType="http://schema.org/Article"
-    >
-      <header>
-        <h2>
-          <Link href={post.slug} itemProp="url">
-            <span itemProp="headline">{title}</span>
-          </Link>
-        </h2>
-        <small>{post.frontmatter.date}</small>
-      </header>
-      <section>
-        <p
-          dangerouslySetInnerHTML={{
-            __html: post.frontmatter.description || post.excerpt,
-          }}
-          itemProp="description"
-        />
-      </section>
-    </article>
-  )
-})}
-*/

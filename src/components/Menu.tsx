@@ -29,7 +29,9 @@ const Menu = (props: IMenu) => (
         </li>
         <li>
           <Link legacyBehavior href="/testimonials">
-            <span onClick={props.onToggleMenu}>Testimonials</span>
+            <a>
+              <span onClick={props.onToggleMenu}>Testimonials</span>
+            </a>
           </Link>
         </li>
       </ul>

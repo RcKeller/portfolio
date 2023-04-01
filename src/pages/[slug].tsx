@@ -45,7 +45,19 @@ const Post = (post: IPost) => {
       <SEO title={title} description={description || excerpt || ''} />
 
       <div id="main" className="alt">
-        <section id="one">
+        <section
+          id="banner"
+          className="style2"
+          style={
+            cover
+              ? {
+                  backgroundImage: `url(/${post.frontmatter.cover})`,
+                  backgroundSize: 'contain',
+                  backgroundPositionY: 'top',
+                }
+              : {}
+          }
+        >
           <div className="inner">
             <header className="major">
               <h1>{title}</h1>
@@ -75,10 +87,14 @@ const Post = (post: IPost) => {
                 )}
               </ul>
             </header>
-            {cover && (
+          </div>
+        </section>
+        <section id="one">
+          <div className="inner">
+            {/* {cover && (
               // <span className="image main">
               <Image src={`/${cover}`} alt={title} width={854} height={480} />
-            )}
+            )} */}
             <section
               dangerouslySetInnerHTML={{ __html: content }}
               itemProp="articleBody"
