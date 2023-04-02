@@ -1,12 +1,10 @@
 import React from 'react'
-import Head from 'next/head'
+
+import SEO from '../components/SEO'
 
 const Elements = () => (
   <>
-    <Head>
-      <title>Elements Page</title>
-      <meta name="description" content="Elements Page" />
-    </Head>
+    <SEO title="Demo" description="Style Demo Page" />
 
     <div id="main" className="alt">
       <section id="one">

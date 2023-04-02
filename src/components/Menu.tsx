@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import config from '../lib/config'
 
 export interface IMenu {
   onToggleMenu: () => void
@@ -17,10 +18,10 @@ const Menu = (props: IMenu) => (
           </Link>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/jbarrowsfitzgerald/">LinkedIn</a>
+          <a href={config.links.linkedin}>LinkedIn</a>
         </li>
         <li>
-          <a href="https://github.com/jbarrfitz">GitHub</a>
+          <a href={config.links.github}>GitHub</a>
         </li>
         <li>
           <a target="_blank" href="/resume.pdf">

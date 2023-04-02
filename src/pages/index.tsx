@@ -1,10 +1,9 @@
-import Head from 'next/head'
-import Image from 'next/image'
 import Link from 'next/link'
 
 import { getAllPosts, IPost } from '../lib/posts'
 
 import Banner from '../components/Banner'
+import SEO from '../components/SEO'
 
 export interface IIndexProps {
   posts: IPost[]
@@ -29,6 +28,7 @@ export default function Index({ posts }: IIndexProps) {
 
   return (
     <>
+      <SEO />
       <div>
         <Banner />
 
