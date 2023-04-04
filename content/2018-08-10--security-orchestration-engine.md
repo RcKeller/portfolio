@@ -14,9 +14,9 @@ To explain the solution, I must introduce three key concepts:
 
 These are the kind of threats that can be identified, typically found by security alerts logged by different systems. Examples of this could be something along the lines of the following:
 
-- __Unauthorized Root User__
-- __Watering Hole Attacks__
-- __Suspected login request forgery__
+- **Unauthorized Root User**
+- **Watering Hole Attacks**
+- **Suspected login request forgery**
 
 ### Remediation Services
 
@@ -29,10 +29,11 @@ These are services leveraged to provide intelligence or potential resolutions fo
 
 The processes involved in the triage process spanning from triage to resolution. Often times these can be reduced to an "if this, then that" model:
 
-- For __Unauthorized Root Users__, __terminate__ their sessions
-- Given a __Suspicious File__, __inspect it__
+- For **Unauthorized Root Users**, **terminate** their sessions
+- Given a **Suspicious File**, **inspect it**
 
 # The Solution
+
 ### The Security Orchestration Engine
 
 <img width=100% src="https://i.imgur.com/DT1bf9l.png"/>

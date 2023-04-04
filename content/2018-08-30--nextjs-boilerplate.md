@@ -5,9 +5,9 @@ category: Boilerplates
 cover: nextjs-boilerplate.png
 source: https://github.com/RcKeller/NextJS-Boilerplate
 tags:
-    - Web
-    - React
-    - NodeJS
+  - Web
+  - React
+  - NodeJS
 ---
 
 An unopinionated yet extensible starter fullstack boilerplate based on [NextJS 7](https://nextjs.org/blog/next-7/). This provides the build infrastructure and structure necessary to make any kind of React application, with or without an internal API. Testing with [Jest/Enzyme](https://airbnb.io/enzyme/docs/guides/jest.html) and [Bundle Analysis](https://www.npmjs.com/package/webpack-bundle-analyzer) comes built-in.
@@ -29,6 +29,7 @@ npm install
 cp config/index.js.example config/index.js
 vim config/index.js
 ```
+
 ```
 npm run dev
 ```
@@ -101,11 +102,13 @@ Every `page/` component has an extra lifecycle method called `getInitialProps`. 
 ## API
 
 ### Vulnerabilities and Exposures
+
 **Source**: [RedHat Security Data API](https://access.redhat.com/documentation/en-us/red_hat_security_data_api/0.1/html/red_hat_security_data_api/)
 
 This API allows the server and users alike to request information about any outstanding vulnerability that has been published (CVE or CVRF). Records can be queried in mass, or individually given a CVE ID.
 
 Examples:
+
 ```
 http://localhost:3000/api/v1/cve
 http://localhost:3000/api/v1/cve/CVE-2016-3706
@@ -115,5 +118,5 @@ http://localhost:3000/api/v1/cve/CVE-2016-3706
 
 - Self-signed HTTPS certificates are included, but in production, you should use a cert authority (shout-out to LetsEncrypt) or, even better, an [NGINX reverse-proxy](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-16-04)
 - [Responses are cached](/server/middleware/Cache.js) very aggressively so we can be kind to RedHat. Be sure to re-evaluate the usage of a cache for your use case, since it could lead to stale reads.
-- Add a state-management solution like MobX or Redux, depending on how much structure you want. Consider making a "Page" wrapper component that includes your provider and avoid using it in [_app.js](/pages/_app.js) - this will minimize your bundle size.
+- Add a state-management solution like MobX or Redux, depending on how much structure you want. Consider making a "Page" wrapper component that includes your provider and avoid using it in [\_app.js](/pages/_app.js) - this will minimize your bundle size.
 - Paginate your dashboards and other data-rich views, this was not included here because your solution will be contingent on your choice in DB.

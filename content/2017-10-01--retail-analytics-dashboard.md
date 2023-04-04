@@ -4,10 +4,10 @@ subtitle: Bespoke retail analytics tools
 category: Portfolio
 cover: retail-analytics-dashboard.png
 tags:
-    - Web
-    - React
-    - Node
-    - Javascript
+  - Web
+  - React
+  - Node
+  - Javascript
 ---
 
 In Fall 2017 I assisted my friend Brad with opening a secondhand Lego store, [Bricks and Minifigs](https://bricksandminifigs.com/store/southeverett/). Lego is a complex commodity - prices on sets are very volatile as collectors hunt for pieces, thus there's a constant question of what is more valuable - sets or pieces. Since there is no single source of truth for set prices, the biggest challenge in this market space is finding a way to analyze the market and evaluate the market in real time.

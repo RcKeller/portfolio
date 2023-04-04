@@ -1,15 +1,15 @@
 ---
 title: Conference Check
-subtitle: "1st place, T-Mobile IoT Hackathon 2018" 
+subtitle: '1st place, T-Mobile IoT Hackathon 2018'
 category: Portfolio
 cover: conference-check.png
 demo: https://devpost.com/software/tmobile-hackathon-lw8hkd
 source: https://github.com/RcKeller/conference-check
 tags:
-    - Web
-    - React
-    - NodeJS
-    - IoT
+  - Web
+  - React
+  - NodeJS
+  - IoT
 ---
 
 Conference Check is a hackathon project by myself and three others:

@@ -7,9 +7,9 @@ date: 05/20/2019
 demo: https://circleci.com/orbs/registry/orb/rckeller/runtime-optimizer
 source: https://github.com/RcKeller/runtime-optimizer
 tags:
-    - CircleCI
-    - DevOps
-    - Testing
+  - CircleCI
+  - DevOps
+  - Testing
 ---
 
 CircleCI is my go-to CI/CD platform these days for personal projects - it's got a [fantastic ecosystem](https://circleci.com/orbs/registry) and can do pretty much everything. The free tier is generous, with an upper ceiling of [1,000](https://circleci.com/pricing/) minutes of runtime per month. If you're like me, you'll burn through this in a week... and then the real bills hit.

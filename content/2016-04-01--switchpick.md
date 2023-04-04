@@ -1,14 +1,14 @@
 ---
 title: SwitchPick
 subtitle: Network Device Cracking
-date: "2016-04-01"
+date: '2016-04-01'
 category: Portfolio
 cover: switchpick.png
 source: https://github.com/RcKeller/SwitchPick
 tags:
-    - Networking
-    - Infrastructure
-    - Security
+  - Networking
+  - Infrastructure
+  - Security
 ---
 
 This Python software suite automatically identifies, cracks and wipes network devices. Aptly named, it's a lockpick of sorts for network devices, and utilized the built-in features (or vulnerabilities) of vendor products to brute force its way to a state of elevated permissions, after which it wipes the device clean.

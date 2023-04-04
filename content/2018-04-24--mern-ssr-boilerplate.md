@@ -1,14 +1,14 @@
 ---
 title: MERN SSR Boilerplate
-subtitle: "Mongo, Express, React, Node - Homemade SSR"
+subtitle: 'Mongo, Express, React, Node - Homemade SSR'
 category: Boilerplates
 cover: mern-ssr-boilerplate.png
 source: https://github.com/RcKeller/MERN-SSR-Boilerplate
 tags:
-    - Web
-    - React
-    - NodeJS
-    - IoT
+  - Web
+  - React
+  - NodeJS
+  - IoT
 ---
 
 MERN (Mongo, Express, React, Node) Boilerplate is one of my two primary boilerplates, this one featuring a homegrown [Server Side Rendering](https://reactjs.org/docs/react-dom-server.html) (SSR) solution.

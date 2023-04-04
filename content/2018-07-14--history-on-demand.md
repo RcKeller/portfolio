@@ -5,9 +5,9 @@ category: Portfolio
 cover: history-on-demand.png
 source: https://github.com/RcKeller/HistoryOnDemand
 tags:
-    - Web
-    - React
-    - NodeJS
+  - Web
+  - React
+  - NodeJS
 ---
 
 History on Demand is a Node.js-based command line tool that uses web scraping to query Smithsonian museums for same-day entry passes. These passes go on sale around 6-6:30 EST and sell out in less than half an hour. History on Demand can be used to reserve passes automatically (for free exhibits) and begin the transaction for paid passes.

@@ -5,9 +5,9 @@ category: Portfolio
 cover: puppet-enhancement-suite.png
 source: https://github.com/RcKeller/userscripts
 tags:
-    - Puppet
-    - Web
-    - Userscripts
+  - Puppet
+  - Web
+  - Userscripts
 ---
 
 Puppet is an amazing automation framework, but adopters experience growing pains due to the lack of idiomatic practices and standards. The best way to deliver quality software is by building quality into the process, and as such, I've decided to address these pain points by building extensions to the Puppet Enterprise Console.
@@ -18,4 +18,4 @@ The browser extensions I've built hydrate the enterprise console with Fact defin
 
 ---
 
-*Note: Scripts available in the repo for this don't include the core extension, but contain utilities, helpers, and boilerplate related to this project.
+\*Note: Scripts available in the repo for this don't include the core extension, but contain utilities, helpers, and boilerplate related to this project.

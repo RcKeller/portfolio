@@ -5,9 +5,9 @@ category: Boilerplates
 cover: rapid-react-redux.png
 source: https://github.com/RcKeller/rapid-react-redux
 tags:
-    - Web
-    - React
-    - Firebase
+  - Web
+  - React
+  - Firebase
 ---
 
 Rapid-React-Redux is a simple boilerplate akin to [Create React App](https://github.com/facebook/create-react-app) designed to facilitate rapid development for MVPs and hackathon projects. The idea was to minimize boilerplate and architectural decisions whilst still remaining feature complete with a low maintenance cost.
