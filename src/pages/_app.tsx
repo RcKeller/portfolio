@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { AppProps } from 'next/app'
 import useTimeout from '../hooks/useTimeout'
+import { GoogleAnalytics } from 'nextjs-google-analytics'
 
 import Header from '../components/Header'
 import Menu from '../components/Menu'
@@ -28,6 +29,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     <div
       className={`body ${loading} ${isMenuVisible ? 'is-menu-visible' : ''}`}
     >
+      <GoogleAnalytics trackPageViews />
       <div id="wrapper">
         <Header onToggleMenu={handleToggleMenu} />
 
