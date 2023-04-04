@@ -1,7 +1,7 @@
 ---
 title: Service Manager
 subtitle: Open Source ITSM Platform
-category: Portfolio
+# category: Portfolio
 cover: itsm-platform.png
 demo: http://students.washington.edu/rykeller/crm2/
 source: https://github.com/RcKeller/open-desk
