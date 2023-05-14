@@ -4,5 +4,6 @@ namespace NodeJS {
     BLUELINK_PASSWORD: string
     BLUELINK_PIN: string
     BLUELINK_VIN: string
+    API_AUTH_TOKEN: string
   }
 }

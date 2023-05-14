@@ -6,6 +6,7 @@ import type {
 } from 'bluelinky/dist/interfaces/common.interfaces'
 
 import { Vehicle } from '../../../lib/bluelink'
+import { requireAuth } from '@/lib/auth'
 
 export type StatusResponse = VehicleStatus | RawVehicleStatus
 
@@ -13,6 +14,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<StatusResponse>
 ) {
+  requireAuth(req, res)
   const car = await Vehicle()
   try {
     const status = await car.lock()
