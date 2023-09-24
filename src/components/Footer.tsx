@@ -30,7 +30,7 @@ const Footer = () => (
       </ul>
       <ul className="copyright" color="white">
         <li>&copy; Andrew Keller Barrows-Fitzgerald</li>
-        <li>Built w/ ♥️ in St. Louis, MO</li>
+        <li>Built w/ ♥️ in Las Vegas, NV</li>
       </ul>
     </div>
   </footer>

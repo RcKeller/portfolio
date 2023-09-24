@@ -7,7 +7,11 @@ date: '2023-04-03'
 > Keller is a respected teammate, a sought-after code reviewer, quick to give helpful feedback, and point out others’ successes. He’s frequently organized team sessions to deploy and monitor new features, and will take it upon himself to triage and update stale PRs like dependency updates.
 > His teammates have praised his ability to manage large epics from start to finish, breaking down the work into subtasks and being skilled at delegating parts that others can help with. Peers have also noted that his improvements to CI and attention to developer experience have impacted how fast and confidently we can deliver new features in Linkpop.
 
-**[Dan Nixon](https://www.linkedin.com/in/dannixon/)** - _Senior Manager, Shopify (current employer)_
+**[Dan Nixon](https://www.linkedin.com/in/dannixon/)** - _Senior Manager, Shopify_
+
+> Keller is an incredibly gifted developer. His talent as a front end developer is truly top-notch, and he is never afraid to take on hard problems. The energy he brings to a team is absolutely infectious. Especially in a remote environment where it's easy to be less engaged, Keller can really bring up the moral of a team.
+
+**[Tyler Sustare](https://www.linkedin.com/in/tylersustare/)** - _Software Manager, Shopify_
 
 > To call Ryan a super-talented engineer is a gross understatement. His attitude, work ethic, communication skills, and of course, technical skills are incredibly impressive. From time to time you meet folks who "wow" you right out of the gate, and Ryan is one of those people.
 
@@ -51,4 +55,6 @@ date: '2023-04-03'
 
 ---
 
-_Source: LinkedIn & Email_
+_Sources: LinkedIn & Email_
+
+_Please note - my previous legal name was Ryan Keller._
